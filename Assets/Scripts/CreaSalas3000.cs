@@ -11,20 +11,19 @@ public class CreaSalas3000 : MonoBehaviour
 
     GameObject sala; //para guardar la sala q se instancie
 
-    public 
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        salaSpawner = transform; //el transform de la puerta para pillar su posicion y rotacion
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && sala == null) 
-        { 
-            sala = Instantiate(salaPrefab, salaSpawner.position, Quaternion.identity); 
+        if (Input.GetKeyDown(KeyCode.E) && sala == null) //cuando se pulse E y no haya sala instanciada
+        {
+            sala = Instantiate(salaPrefab, salaSpawner.position, salaSpawner.rotation);
         }
     }
 }
