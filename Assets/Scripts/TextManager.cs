@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 
 [System.Serializable]
@@ -18,8 +19,6 @@ public class TextContainer
 }
 
 
-
-
 public class TextManager : MonoBehaviour
 {
     [SerializeField]
@@ -28,11 +27,10 @@ public class TextManager : MonoBehaviour
     public TextAsset jsonFile;
     private TextContainer textContainer_;
 
-
     // Start is called before the first frame update
     void Start()
-    {
-        if(jsonFile != null)
+    { 
+        if(jsonFile != null && dialogueScript_ != null)
         {
             string jsonString = jsonFile.text;
             textContainer_ = JsonUtility.FromJson<TextContainer>(jsonString);
@@ -40,7 +38,9 @@ public class TextManager : MonoBehaviour
             if(textContainer_ != null  && textContainer_.textos != null) {
                 foreach(Texto texto in textContainer_.textos)
                 {
-
+                    //lines.Add(texto.contenido);
+                    Debug.Log("ID: " + texto.id + ", Contenido: " + texto.contenido);
+                    dialogueScript_.addLine(texto.contenido, texto.id);
                 }
             }
         }
@@ -50,5 +50,12 @@ public class TextManager : MonoBehaviour
     void Update()
     {
         
+    }
+    private string[] ListToArray()
+    {
+
+
+
+        return null;
     }
 }
