@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2567d723111e60a4abb45fb01fc8038e
+guid: 047bef76acd56cd42a3242458806ac61
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Telephone_Vintage
-    second: {fileID: 2100000, guid: ff75a606b415a684088312b86815339e, type: 2}
+      name: Walls
+    second: {fileID: 2100000, guid: df2b84a14b613344ea30ada2e648fbea, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

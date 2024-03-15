@@ -1,16 +1,11 @@
 fileFormatVersion: 2
-guid: 2567d723111e60a4abb45fb01fc8038e
+guid: 1644980e16b07034c83bbfed25081bb0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Telephone_Vintage
-    second: {fileID: 2100000, guid: ff75a606b415a684088312b86815339e, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
