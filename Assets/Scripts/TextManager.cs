@@ -35,10 +35,6 @@ public class TextManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            dialogueScript_.setLines(getLines(2));
-        }
     }
 
     public string[] getLines(int idDialogo)
@@ -52,4 +48,17 @@ public class TextManager : MonoBehaviour
         }
         return new string[0];
     }
+
+    public void setDialogo(int idT)
+    {
+        dialogueScript_.setLines(getLines(idT));
+    }
+
+    public void showDialogo(int idT)
+    {
+        setDialogo(idT);
+        dialogueScript_.StartDialogue();
+    }
+
+    public bool IsWritting() { return dialogueScript_.writting(); }
 }
