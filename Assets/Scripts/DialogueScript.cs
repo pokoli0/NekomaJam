@@ -66,12 +66,8 @@ private void StartDialogue() {
         
         
     }
-    public void addLine(string line, int i)
+   public void setLines(string[] d)
     {
-        lines[i] = line;
-    }
-    public void initLines(int size)
-    {
-        lines = new string[size];
+        lines = d;
     }
 }
