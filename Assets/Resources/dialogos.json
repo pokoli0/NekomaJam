@@ -1,18 +1,25 @@
 {
-    "textos": [
-        {
-            "id": 1,
-            "contenido": "[Un mensaje de voz pendiente en el buzon]"
-        },
-        {
-            "id": 2,
-            "contenido": "mas cosas que no se que poner de momento"
-        },
-        {
-            "id": 3,
-            "contenido": "mas cosas que me valen verga de momento xddd"
-        }
-    ],
-    "size": 3
-
-}
+    "dialogos": [
+      {
+        "id": 1,
+        "frases": [
+          "¡Hola!", 
+          "¿Cómo estás?" 
+        ]
+      },
+      {
+        "id": 2,
+        "frases": [
+          "¿Qué tal?",
+          "Me alegro de verte."
+        ]
+      },
+      {
+        "id": 3,
+        "frases": [
+          "¡Buenos días!",
+          "¿Qué planes tienes para hoy?"
+        ]
+      }
+    ]
+  }
