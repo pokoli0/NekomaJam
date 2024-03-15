@@ -19,6 +19,8 @@ public class DialogueScript : MonoBehaviour
     private float tiempoEntreFrases = 1.0f;
 
     private int index;
+
+    private bool isWritting = false;
     
     void Start()
     {
@@ -28,12 +30,9 @@ public class DialogueScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-           StartDialogue();
-        }
     }
-private void StartDialogue() {
+public void StartDialogue() {
+        isWritting = true;
         StartCoroutine(WriteLine());
 }
 
@@ -60,6 +59,7 @@ private void StartDialogue() {
             {
                 //Reset index 
                 dialogueText.text = string.Empty;
+                isWritting = false;
                 index = 0;
             
         }
@@ -70,4 +70,6 @@ private void StartDialogue() {
     {
         lines = d;
     }
+
+    public bool writting() { return isWritting; }
 }
