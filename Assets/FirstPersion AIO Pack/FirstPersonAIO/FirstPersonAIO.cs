@@ -71,6 +71,7 @@ public class FirstPersonAIO : MonoBehaviour {
 
     #region Variables
 
+
     #region Input Settings
     public bool controllerPauseState = false;
     #endregion
@@ -374,6 +375,7 @@ public class FirstPersonAIO : MonoBehaviour {
             }
 
         if(Input.GetButtonDown("Cancel")){ControllerPause();}
+
         #endregion
 
         #region Movement Settings - Update
