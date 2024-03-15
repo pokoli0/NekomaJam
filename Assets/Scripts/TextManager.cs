@@ -1,23 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Assertions;
-
 
 [System.Serializable]
-public class Texto
+public class DialogoData
+{
+    public Dialogo[] dialogos;
+}
+
+[System.Serializable]
+public class Dialogo
 {
     public int id;
-    public string contenido;
+    public string[] frases;
 }
-[System.Serializable]
-public class TextContainer
-{
-    public List<Texto> textos;
-}
-
 
 public class TextManager : MonoBehaviour
 {
@@ -25,37 +19,46 @@ public class TextManager : MonoBehaviour
     private DialogueScript dialogueScript_;
 
     public TextAsset jsonFile;
-    private TextContainer textContainer_;
+    public DialogoData dialogoData;
 
-    // Start is called before the first frame update
     void Start()
-    { 
-        if(jsonFile != null && dialogueScript_ != null)
+    {
+        try
         {
-            string jsonString = jsonFile.text;
-            textContainer_ = JsonUtility.FromJson<TextContainer>(jsonString);
-
-            if(textContainer_ != null  && textContainer_.textos != null) {
-                foreach(Texto texto in textContainer_.textos)
-                {
-                    //lines.Add(texto.contenido);
-                    Debug.Log("ID: " + texto.id + ", Contenido: " + texto.contenido);
-                    dialogueScript_.addLine(texto.contenido, texto.id);
-                }
-            }
+            dialogoData = JsonUtility.FromJson<DialogoData>(jsonFile.text);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Error al leer el JSON: " + e.Message);
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
     }
-    private string[] ListToArray()
+
+    public string[] getLines(int idDialogo)
     {
-
-
-
-        return null;
+        foreach (Dialogo dialogo in dialogoData.dialogos)
+        {
+            if (dialogo.id == idDialogo)
+            {
+                return dialogo.frases;
+            }
+        }
+        return new string[0];
     }
+
+    public void setDialogo(int idT)
+    {
+        dialogueScript_.setLines(getLines(idT));
+    }
+
+    public void showDialogo(int idT)
+    {
+        setDialogo(idT);
+        dialogueScript_.StartDialogue();
+    }
+
+    public bool IsWritting() { return dialogueScript_.writting(); }
 }
