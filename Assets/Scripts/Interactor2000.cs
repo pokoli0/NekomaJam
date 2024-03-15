@@ -8,7 +8,7 @@ public class Interactor2000 : MonoBehaviour
 
     [SerializeField] float distance = 3.0f;
 
-    [SerializeField] private LayerMask mask;
+    [SerializeField] private LayerMask mask; //esta va a ser la 6
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +28,11 @@ public class Interactor2000 : MonoBehaviour
             if(hitInfo.collider.GetComponent<InteractorBase>() != null)
             {
                 Debug.Log(hitInfo.collider.GetComponent<InteractorBase>().promptMessage); //pronto lo cambio a fotooo
-                Debug.Log("a");
+                Debug.Log("estoy mirando un interactuable");
                 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    Debug.Log("estoy pulsando un interactuable");
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                 }
             }
