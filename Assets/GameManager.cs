@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+
     private static GameManager _instance;
 
     // Instancia publica de GameManager
@@ -43,7 +45,14 @@ public class GameManager : MonoBehaviour
 
     public enum Habitaciones{
         h0 = 0, // no sirve para nada, solo es para que cuadren los indices y las ids de los dialogos
-        hab_1, hab_2, hab_3, hab_4, hab_5, hab_6, hab_7, hab_8
+        hab_1 = 1, 
+        hab_2 = 2, 
+        hab_3 = 3, 
+        hab_4 = 4, 
+        hab_5 = 5, 
+        hab_6 = 6, 
+        hab_7 = 7, 
+        hab_8 = 8
     }
 
     public Habitaciones currHab;
@@ -58,5 +67,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public int getHabitacion() { return ((int)currHab); }
+
+    public void nextHabitacion()
+    {
+        currHab++;
     }
 }

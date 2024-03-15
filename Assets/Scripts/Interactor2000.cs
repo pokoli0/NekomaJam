@@ -11,7 +11,6 @@ public class Interactor2000 : MonoBehaviour
     [SerializeField] private LayerMask mask; //esta va a ser la 6
 
     [SerializeField] private TextManager textManager_;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,10 +34,11 @@ public class Interactor2000 : MonoBehaviour
                 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log(textManager_.IsWritting());
-                    Debug.Log("estoy pulsando un interactuable");
+                    //Todo esto todavia esta por ver
+                    Debug.Log("HABITACION: " + GameManager.Instance.getHabitacion());
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                    textManager_.showDialogo(2);
+                    textManager_.showDialogo(GameManager.Instance.getHabitacion());
+                    GameManager.Instance.nextHabitacion();
                 }
             }
         }
