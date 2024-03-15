@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2567d723111e60a4abb45fb01fc8038e
+guid: c02aed7f107a0d84a96acd6746d2ed94
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Telephone_Vintage
-    second: {fileID: 2100000, guid: ff75a606b415a684088312b86815339e, type: 2}
+      name: standardSurface1
+    second: {fileID: 2100000, guid: f2254e451ee9c6b4fb8792c43b752bdf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
