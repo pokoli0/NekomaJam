@@ -27,7 +27,7 @@ public class Puerta : InteractorBase
     public void close()
     {
         animator.SetTrigger("Close");
-        enableInteract(false);
+        //enableInteract(false);
     }
 
 
