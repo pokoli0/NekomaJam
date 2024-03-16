@@ -279,6 +279,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decagonoPrefab: {fileID: 2871973205886398165}
+  salaTlfnPrefab: {fileID: 8287528299369933334, guid: 917387d6c09bcc647946f727d6b415f6,
+    type: 3}
+  previousDoor: {fileID: 0}
+  previousDoor2: {fileID: 0}
+  salaTelefono: {fileID: 0}
 --- !u!64 &4010886409165216301
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -537,6 +542,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3211238910948291695}
     m_Modifications:
+    - target: {fileID: 124537737509458436, guid: 3eefa51a5fde7424e939a656ca253e2a,
+        type: 3}
+      propertyPath: laBuena
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2838763893328188695, guid: 3eefa51a5fde7424e939a656ca253e2a,
         type: 3}
       propertyPath: m_LocalPosition.x

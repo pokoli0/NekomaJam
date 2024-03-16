@@ -40,9 +40,6 @@ public class HabitacionInicial : MonoBehaviour
                 mesa.SetActive(true);
                 isVisible = true;
             }
-            puerta.SetActive(true);
-            paredConPuerta.SetActive(true);
-            paredSinPuerta.SetActive(false);
         }
     }
 

@@ -23,7 +23,7 @@ public abstract class InteractorBase : MonoBehaviour
         //para overridear
     }
 
-    protected void enableInteract(bool b)
+    public void enableInteract(bool b)
     {
         canInteract = b;
     }
