@@ -12,10 +12,12 @@ public class Puerta : InteractorBase
     void Start()
     {
         animator = GetComponent<Animator>();
-        
-        if (transform.parent.parent.parent.GetComponent<DecagonoSpawner>() != null)
+        if(decagono == null)
         {
-            decagono = transform.parent.parent.parent.GetComponent<DecagonoSpawner>();
+            if (transform.parent.parent.parent.GetComponent<DecagonoSpawner>() != null)
+            {
+                decagono = transform.parent.parent.parent.GetComponent<DecagonoSpawner>();
+            }
         }
     }
 
