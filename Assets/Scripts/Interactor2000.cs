@@ -62,6 +62,14 @@ public class Interactor2000 : MonoBehaviour
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                 }
             }
+            if(hitInfo.collider.GetComponent<PuertaSola>() != null)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                    hitInfo.collider.GetComponent<PuertaSola>().closed = false;
+                }
+            }
         }
         else
         {
@@ -76,7 +84,21 @@ public class Interactor2000 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("close_door"))
         {
-            other.GetComponentInChildren<Puerta>().close(); 
+           
+            PuertaSola p = other.GetComponentInChildren<PuertaSola>();
+            if(p != null)
+            {
+                if (p.closed)
+                {
+                    p.enableCross(true);
+                }
+                other.GetComponentInChildren<PuertaSola>().close();
+
+            }
+            if (other.GetComponentInChildren<Puerta>() != null)
+            {
+                other.GetComponentInChildren<Puerta>().close();
+            }
         }
     }
 }

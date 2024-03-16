@@ -7,6 +7,7 @@ public class Puerta : InteractorBase
 {
     public Animator animator;
     public DecagonoSpawner decagono;
+    public bool closed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class Puerta : InteractorBase
 
     protected override void Interact()
     {
+        closed = false;
         if(canInteract) animator.SetTrigger("Open");
 
         if (decagono != null)
@@ -39,11 +41,11 @@ public class Puerta : InteractorBase
         }
     }
 
-    public void close()
+    public virtual void close()
     {
+        Debug.Log("PUERTA: close");
+        closed = true;
         animator.SetTrigger("Close");
         enableInteract(false);
     }
-
-
 }
