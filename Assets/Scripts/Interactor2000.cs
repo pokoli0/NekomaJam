@@ -13,11 +13,17 @@ public class Interactor2000 : MonoBehaviour
 
     [SerializeField] private TextManager textManager_;
 
-    [SerializeField] public TextMeshProUGUI displayText;
+    [SerializeField] public TMP_Text displayText; // el "Pulsa E"
+
     // Start is called before the first frame update
     void Start()
     {
         cam = GetComponent<FirstPersonAIO>().playerCamera;
+        if (displayText != null)
+        {
+            displayText.enabled = false;
+        }
+        
     }
 
     // Update is called once per frame
@@ -30,12 +36,12 @@ public class Interactor2000 : MonoBehaviour
 
         if(Physics.Raycast(ray, out hitInfo, distance, mask))
         {
-            if(hitInfo.collider.GetComponent<Telefono>() != null)
+            if (displayText != null)
             {
-                //Debug.Log(hitInfo.collider.GetComponent<Telefono>().promptMessage); //pronto lo cambio a fotooo
-                // Debug.Log("estoy mirando un interactuable");
-                displayText.gameObject.SetActive(true);
-
+                displayText.enabled = true;
+            }
+            if (hitInfo.collider.GetComponent<Telefono>() != null)
+            {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     GameManager gM = GameManager.Instance;
@@ -46,23 +52,20 @@ public class Interactor2000 : MonoBehaviour
                     gM.nextHabitacion();
                 }
             }
-            else
-            {
-                displayText.gameObject.SetActive(false);
-            }
 
             if (hitInfo.collider.GetComponent<Puerta>() != null)
             {
-                Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
-                                                                                  // Debug.Log("estoy mirando un interactuable");
-                displayText.enabled=true;
-
+                //Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
+                                                                                  // Debug.Log("estoy mirando un interactuable")
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                 }
             }
-            else
+        }
+        else
+        {
+            if (displayText != null)
             {
                 displayText.enabled = false;
             }
