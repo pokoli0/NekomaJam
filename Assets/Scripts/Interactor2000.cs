@@ -43,7 +43,13 @@ public class Interactor2000 : MonoBehaviour
             }
             if (hitInfo.collider.GetComponent<Puerta>() != null)
             {
+                Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
+                                                                                    // Debug.Log("estoy mirando un interactuable");
 
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                }
             }
         }
     }
