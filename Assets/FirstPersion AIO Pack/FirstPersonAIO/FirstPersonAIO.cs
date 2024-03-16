@@ -265,10 +265,6 @@ public class FirstPersonAIO : MonoBehaviour {
         _crouchModifiers.colliderHeight = capsule.height;
         #endregion
 
-        #region Headbobbing Settings - Awake
-
-        #endregion
-
     }
 
     private void Start(){
@@ -377,15 +373,6 @@ public class FirstPersonAIO : MonoBehaviour {
         if(Input.GetButtonDown("Cancel")){ControllerPause();}
 
         #endregion
-
-        #region Movement Settings - Update
-        
-        #endregion
-
-        #region Headbobbing Settings - Update
-
-        #endregion
-
     }
 
     private void FixedUpdate(){

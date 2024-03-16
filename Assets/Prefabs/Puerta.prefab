@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 6556554008728568208}
   - component: {fileID: 4383237152834924825}
   - component: {fileID: 6887364784458188049}
+  - component: {fileID: 4900756738548052505}
   m_Layer: 0
   m_Name: PuertaMarco
   m_TagString: Untagged
@@ -333,6 +334,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4900756738548052505
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6405346165095253736}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2151515227523668204, guid: 0c16ec13c8c988c4e97fa710962ae668, type: 3}
 --- !u!1 &6611160470787850113
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +368,7 @@ GameObject:
   - component: {fileID: 5197209067854545464}
   m_Layer: 0
   m_Name: CloseCollider
-  m_TagString: Untagged
+  m_TagString: close_door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -385,8 +408,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.65911, y: 3.1226485, z: 2.2233214}
+  m_Center: {x: 0.5356879, y: 1.0613242, z: -2.39}
 --- !u!1 &7267566014893644121
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +616,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: 
-  image: {fileID: 0}
   animator: {fileID: 1418458721215867440}
   decagono: {fileID: 0}
 --- !u!64 &8032851686345128202

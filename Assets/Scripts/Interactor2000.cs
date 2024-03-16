@@ -71,4 +71,12 @@ public class Interactor2000 : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("close_door"))
+        {
+            other.GetComponentInChildren<Puerta>().close(); 
+        }
+    }
 }

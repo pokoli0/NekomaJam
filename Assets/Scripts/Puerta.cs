@@ -12,10 +12,12 @@ public class Puerta : InteractorBase
     void Start()
     {
         animator = GetComponent<Animator>();
-        
-        if (transform.parent.GetComponent<DecagonoSpawner>() != null)
+        if(decagono == null)
         {
-            decagono = transform.parent.GetComponent<DecagonoSpawner>();
+            if (transform.parent.parent.parent.GetComponent<DecagonoSpawner>() != null)
+            {
+                decagono = transform.parent.parent.parent.GetComponent<DecagonoSpawner>();
+            }
         }
     }
 
@@ -40,7 +42,7 @@ public class Puerta : InteractorBase
     public void close()
     {
         animator.SetTrigger("Close");
-        //enableInteract(false);
+        enableInteract(false);
     }
 
 
