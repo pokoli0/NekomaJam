@@ -8,10 +8,13 @@ public class Puerta : InteractorBase
     public Animator animator;
     public DecagonoSpawner decagono;
 
+    public bool laBuena = false;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+
         if(decagono == null)
         {
             if (transform.parent.parent.parent.GetComponent<DecagonoSpawner>() != null)
@@ -20,7 +23,7 @@ public class Puerta : InteractorBase
             }
         }
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -34,9 +37,12 @@ public class Puerta : InteractorBase
         if (decagono != null)
         {
             Quaternion rotacionAbuelo = transform.parent.parent.rotation;
-
-            decagono.InstanceRoom(transform.position, rotacionAbuelo);
+            Transform posicionAbuelo = transform.parent.parent;
+            
+            decagono.InstanceRoom(posicionAbuelo.position, rotacionAbuelo, this.gameObject,laBuena);
+            
         }
+           
     }
 
     public void close()
