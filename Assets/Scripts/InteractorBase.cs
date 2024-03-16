@@ -11,7 +11,11 @@ public abstract class InteractorBase : MonoBehaviour
 
     public void BaseInteract()
     {
-        Interact();
+        if (canInteract)
+        {
+            Interact();
+        }
+        
     }
 
     protected virtual void Interact()

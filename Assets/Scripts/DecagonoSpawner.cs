@@ -22,9 +22,9 @@ public class DecagonoSpawner : MonoBehaviour
 
     public void InstanceRoom(Vector3 posicion, Quaternion rotacion)
     {
-        Vector3 desplazamientoZ = Quaternion.Euler(0f, 0f, rotacion.z) * Vector3.forward * distanciaDesplazamiento;
+        Vector3 desplazamientoZ = Quaternion.Euler(0f, rotacion.y, 0f) * Vector3.forward * distanciaDesplazamiento;
         Vector3 posicionDesplazada = transform.position+ desplazamientoZ;
 
-        Instantiate(decagonoPrefab, posicionDesplazada, rotacion);
+        Instantiate(decagonoPrefab, posicionDesplazada, Quaternion.Euler(0f, rotacion.y+ 36.5f, 0f) );
     }
 }
