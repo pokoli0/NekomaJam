@@ -6,6 +6,7 @@ using UnityEngine;
 public class Puerta : InteractorBase
 {
     public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +16,19 @@ public class Puerta : InteractorBase
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
 
     protected override void Interact()
     {
-        animator.SetTrigger("Open");
+        if(canInteract) animator.SetTrigger("Open");
     }
+
+    public void close()
+    {
+        animator.SetTrigger("Close");
+        enableInteract(false);
+    }
+
+
 }

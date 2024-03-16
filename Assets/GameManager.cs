@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject player_;
 
+    public GameObject getPlayer() { return player_; }
+
+    [SerializeField]
+    private TextManager textManager_;
+
+    public TextManager getTextManager() { return textManager_; }
 
     private static GameManager _instance;
 
@@ -70,7 +78,9 @@ public class GameManager : MonoBehaviour
     }
 
     public int getHabitacion() { return ((int)currHab); }
-
+    /// <summary>
+    /// Avanza de habitacion mientras se pueda
+    /// </summary>
     public void nextHabitacion()
     {
         currHab++;

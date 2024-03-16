@@ -333,6 +333,60 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6611160470787850113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8954699950450176940}
+  - component: {fileID: 5197209067854545464}
+  m_Layer: 0
+  m_Name: CloseCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8954699950450176940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611160470787850113}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8915440296488524471}
+  m_Father: {fileID: 2838763893328188695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5197209067854545464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611160470787850113}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7267566014893644121
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,13 +501,13 @@ Transform:
   m_GameObject: {fileID: 7644948787091553368}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06325841, y: 0, z: -0.030950546}
+  m_LocalPosition: {x: 0.06325817, y: 0, z: -0.030950546}
   m_LocalScale: {x: 1, y: 1, z: 6.1902556}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7814870411334984294}
   - {fileID: 6679516647026311769}
-  m_Father: {fileID: 2838763893328188695}
+  m_Father: {fileID: 8954699950450176940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6065051049747681794
 MeshFilter:
@@ -541,6 +595,7 @@ MonoBehaviour:
   promptMessage: 
   image: {fileID: 0}
   animator: {fileID: 1418458721215867440}
+  closeCollider: {fileID: 0}
 --- !u!64 &8032851686345128202
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -593,6 +648,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6556554008728568208}
-  - {fileID: 8915440296488524471}
+  - {fileID: 8954699950450176940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

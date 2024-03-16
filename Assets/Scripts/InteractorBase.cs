@@ -8,6 +8,7 @@ public abstract class InteractorBase : MonoBehaviour
 {
     [SerializeField] public string promptMessage;
     [SerializeField] public Image image;
+    protected bool canInteract = true;
 
     public void BaseInteract()
     {
@@ -18,4 +19,10 @@ public abstract class InteractorBase : MonoBehaviour
     {
         //para overridear
     }
+
+    protected void enableInteract(bool b)
+    {
+        canInteract = b;
+    }
+    
 }

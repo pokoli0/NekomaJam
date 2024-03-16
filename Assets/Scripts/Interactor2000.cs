@@ -38,11 +38,12 @@ public class Interactor2000 : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    GameManager gM = GameManager.Instance;
+
                     //Todo esto todavia esta por ver
-                    Debug.Log("HABITACION: " + GameManager.Instance.getHabitacion());
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                    textManager_.showDialogo(GameManager.Instance.getHabitacion());
-                    GameManager.Instance.nextHabitacion();
+                    gM.getTextManager().showDialogo(gM.getHabitacion());
+                    gM.nextHabitacion();
                 }
             }
             else

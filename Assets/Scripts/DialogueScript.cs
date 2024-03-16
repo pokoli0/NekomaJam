@@ -35,7 +35,10 @@ public void StartDialogue() {
         isWritting = true;
         StartCoroutine(WriteLine());
 }
-
+    /// <summary>
+    /// Corrutina que muestra el texto poco a poco
+    /// </summary>
+    /// <returns>el tiempo de espera entre caracteres</returns>
     IEnumerator WriteLine()
     {
         
@@ -66,6 +69,8 @@ public void StartDialogue() {
         
         
     }
+
+    /// <param name="d">array de strings de dialogo</param>
    public void setLines(string[] d)
     {
         lines = d;
