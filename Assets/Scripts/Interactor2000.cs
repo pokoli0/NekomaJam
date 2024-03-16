@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Interactor2000 : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Interactor2000 : MonoBehaviour
     [SerializeField] private LayerMask mask; //esta va a ser la 6
 
     [SerializeField] private TextManager textManager_;
+
+    [SerializeField] public TextMeshProUGUI displayText;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +32,10 @@ public class Interactor2000 : MonoBehaviour
         {
             if(hitInfo.collider.GetComponent<Telefono>() != null)
             {
-                Debug.Log(hitInfo.collider.GetComponent<Telefono>().promptMessage); //pronto lo cambio a fotooo
+                //Debug.Log(hitInfo.collider.GetComponent<Telefono>().promptMessage); //pronto lo cambio a fotooo
                 // Debug.Log("estoy mirando un interactuable");
-                
+                displayText.gameObject.SetActive(true);
+
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     //Todo esto todavia esta por ver
@@ -41,15 +45,25 @@ public class Interactor2000 : MonoBehaviour
                     GameManager.Instance.nextHabitacion();
                 }
             }
+            else
+            {
+                displayText.gameObject.SetActive(false);
+            }
+
             if (hitInfo.collider.GetComponent<Puerta>() != null)
             {
                 Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
-                                                                                    // Debug.Log("estoy mirando un interactuable");
+                                                                                  // Debug.Log("estoy mirando un interactuable");
+                displayText.enabled=true;
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                 }
+            }
+            else
+            {
+                displayText.enabled = false;
             }
         }
     }
