@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5232120239922841385}
   - component: {fileID: 3316768652415536113}
   - component: {fileID: 4196149957261064059}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pomo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2661967795990530801}
   - component: {fileID: 8883988825460906352}
   - component: {fileID: 5694247977452681508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pomo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7814870411334984294}
   - component: {fileID: 6285875027149084157}
   - component: {fileID: 2620641392491270443}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SoportePomo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 6679516647026311769}
   - component: {fileID: 5876217125711838583}
   - component: {fileID: 7421605814754535893}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SoportePomo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,9 @@ GameObject:
   - component: {fileID: 6065051049747681794}
   - component: {fileID: 6682669263313863437}
   - component: {fileID: 1418458721215867440}
-  m_Layer: 0
+  - component: {fileID: 124537737509458436}
+  - component: {fileID: 8032851686345128202}
+  m_Layer: 6
   m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,6 +526,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &124537737509458436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7644948787091553368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13fc557fb9970b42ad4b64a5940cd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: 
+  image: {fileID: 0}
+  animator: {fileID: 1418458721215867440}
+--- !u!64 &8032851686345128202
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7644948787091553368}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2268895336617432729, guid: 0c16ec13c8c988c4e97fa710962ae668, type: 3}
 --- !u!1 &7703174578358953827
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +572,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2838763893328188695}
-  - component: {fileID: 7800628299438147355}
   m_Layer: 0
   m_Name: Puerta
   m_TagString: Untagged
@@ -549,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7703174578358953827}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.54024196, y: -0.004882096, z: 3.3726358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -558,24 +596,3 @@ Transform:
   - {fileID: 8915440296488524471}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7800628299438147355
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7703174578358953827}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.15, y: 2.11, z: 1}
-  m_Center: {x: 0.6, y: 1.08, z: -0.51}
