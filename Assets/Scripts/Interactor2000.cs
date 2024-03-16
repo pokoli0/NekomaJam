@@ -19,7 +19,11 @@ public class Interactor2000 : MonoBehaviour
     void Start()
     {
         cam = GetComponent<FirstPersonAIO>().playerCamera;
-        displayText.enabled = false;
+        if (displayText != null)
+        {
+            displayText.enabled = false;
+        }
+        
     }
 
     // Update is called once per frame
@@ -32,7 +36,10 @@ public class Interactor2000 : MonoBehaviour
 
         if(Physics.Raycast(ray, out hitInfo, distance, mask))
         {
-            displayText.enabled = true;
+            if (displayText != null)
+            {
+                displayText.enabled = true;
+            }
             if (hitInfo.collider.GetComponent<Telefono>() != null)
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -48,7 +55,7 @@ public class Interactor2000 : MonoBehaviour
 
             if (hitInfo.collider.GetComponent<Puerta>() != null)
             {
-                Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
+                //Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
                                                                                   // Debug.Log("estoy mirando un interactuable")
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -58,7 +65,10 @@ public class Interactor2000 : MonoBehaviour
         }
         else
         {
-            displayText.enabled = false;
+            if (displayText != null)
+            {
+                displayText.enabled = false;
+            }
         }
     }
 }
