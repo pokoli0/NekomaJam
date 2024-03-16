@@ -27,9 +27,9 @@ public class Interactor2000 : MonoBehaviour
 
         if(Physics.Raycast(ray, out hitInfo, distance, mask))
         {
-            if(hitInfo.collider.GetComponent<InteractorBase>() != null)
+            if(hitInfo.collider.GetComponent<Telefono>() != null)
             {
-                Debug.Log(hitInfo.collider.GetComponent<InteractorBase>().promptMessage); //pronto lo cambio a fotooo
+                Debug.Log(hitInfo.collider.GetComponent<Telefono>().promptMessage); //pronto lo cambio a fotooo
                 // Debug.Log("estoy mirando un interactuable");
                 
                 if (Input.GetKeyDown(KeyCode.E))
@@ -39,6 +39,16 @@ public class Interactor2000 : MonoBehaviour
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                     textManager_.showDialogo(GameManager.Instance.getHabitacion());
                     GameManager.Instance.nextHabitacion();
+                }
+            }
+            if (hitInfo.collider.GetComponent<Puerta>() != null)
+            {
+                Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
+                                                                                    // Debug.Log("estoy mirando un interactuable");
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                 }
             }
         }
