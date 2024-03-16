@@ -3,22 +3,80 @@
       {
         "id": 1,
         "frases": [
-          "¡Hola!", 
-          "¿Cómo estás?" 
+          "Espera... ¿Quién eres tú?", 
+          "¿Cómo has llegado hasta aquí?",
+          "En cualquier caso, no deberías estar aquí.",
+          "Sal por la puerta que tienes detrás de ti." 
         ]
       },
       {
         "id": 2,
         "frases": [
-          "¿Qué tal?",
-          "Me alegro de verte."
+            "¿No te acabo de decir que salgas? ¿Por qué has vuelto?",
+            "Vuelve a salir por la puerta y espero que esta vez te vayas de verdad."
         ]
       },
       {
         "id": 3,
         "frases": [
-          "¡Buenos días!",
-          "¿Qué planes tienes para hoy?"
+          "No lo entiendo... Creo que no es tan difícil.",
+          "¿Por qué narices no dejas de venir aquí una y otra vez?"
+        ]
+      },
+      {
+        "id": 4,
+        "frases": [
+            "Vale, esto no debería ser tan complicado, pero lo está siendo.",
+            "Voy a darle otro enfoque e intentar ayudarte a salir.",
+            "¿Por qué no empiezas por calmarte, darte una vuelta",
+            "y probar a recordar cómo llegaste hasta aquí?"
+        ]
+      },
+      {
+        "id": 5,
+        "frases": [
+            "~ TIENE 1 MENSAJE NUEVO ~",
+            "Otra vez...",
+            "Otra vez vuelves a arruinarlo todo por tu maldito egoismo.",
+            "No entiendo por qué tenías que contárselo si es algo que no te incumbe",
+            "Para la forma en la actúas, mejor si simplemente no existieses.",
+            "...",
+            "..."
+        ]
+      },
+      {
+        "id": 6,
+        "frases": [
+            "Ya entiendo, tú realmente sabías todo este tiempo cómo salir.",
+            "No se por qué me has hecho perder el tiempo.",
+            "Tan solo...",
+            "Hazlo...",
+            "Hazlo...",
+            "HAZLO, HAZLO, HAZLO, HAZLO, HAZLO, HAZLO, HAZLO, HAZLO, HAZLO, HAZLO, HAZLO"
+        ]
+      },
+      {
+        "id": 7,
+        "frases": [
+            "Cariño... Cuando me lo dijeron no lo podía creer.",
+            "¿Cómo es posible que me hayas hecho esto?",
+            "¿Cómo es posible que te hayas hecho esto?",
+            "No puedo entender cómo ha acabado todo así",
+            "cuando tú eras una chica tan sonriente y buena.",
+            "Solo deseo que despiertes y me digas qué ha pasado."
+        ]
+      },
+      {
+        "id": 8,
+        "frases": [
+           "Vaya...",
+           "No esperaba verte de nuevo. Ha pasado bastante tiempo.",
+           "Tanto que pensé que lo habías logrado. Te has planteado que quizás",
+           "esa insistencia tuya, la cual me martiriza, ¿pueda ser realmente una virtud?",
+           "No se...",
+           "Creo que estamos más cerca que nunca de la salida.",
+           "Por un lado tengo miedo de que volvamos al mismo sitio, pero por otro...",
+           "Da igual, corre, salgamos de aquí."
         ]
       }
     ]
