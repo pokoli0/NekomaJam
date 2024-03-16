@@ -11,7 +11,6 @@ public class Interactor2000 : MonoBehaviour
 
     [SerializeField] private LayerMask mask; //esta va a ser la 6
 
-    [SerializeField] private TextManager textManager_;
 
     [SerializeField] public TMP_Text displayText; // el "Pulsa E"
 
@@ -44,12 +43,9 @@ public class Interactor2000 : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    GameManager gM = GameManager.Instance;
-
                     //Todo esto todavia esta por ver
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                    gM.getTextManager().showDialogo(gM.getHabitacion());
-                    gM.nextHabitacion();
+                    hitInfo.collider.GetComponent<InteractorBase>().enableInteract(false);
                 }
             }
 
@@ -57,6 +53,22 @@ public class Interactor2000 : MonoBehaviour
             {
                 //Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
                                                                                   // Debug.Log("estoy mirando un interactuable")
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                }
+            }
+            if (hitInfo.collider.GetComponent<PuertaDesplazable>() != null)
+            {
+                //Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
+                // Debug.Log("estoy mirando un interactuable")
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                }
+            }
+            if(hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)
+            {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
@@ -74,9 +86,13 @@ public class Interactor2000 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("close_door"))
+        if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<Puerta>() != null)
         {
             other.GetComponentInChildren<Puerta>().close(); 
+        }
+        else if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<PuertaHabitaciones>() != null)
+        {
+            other.GetComponentInChildren<PuertaHabitaciones>().close();
         }
     }
 }
