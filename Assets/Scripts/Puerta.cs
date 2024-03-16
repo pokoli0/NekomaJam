@@ -13,9 +13,9 @@ public class Puerta : InteractorBase
     {
         animator = GetComponent<Animator>();
         
-        if (transform.parent.GetComponent<DecagonoSpawner>() != null)
+        if (transform.parent.parent.parent.GetComponent<DecagonoSpawner>() != null)
         {
-            decagono = transform.parent.GetComponent<DecagonoSpawner>();
+            decagono = transform.parent.parent.parent.GetComponent<DecagonoSpawner>();
         }
     }
 

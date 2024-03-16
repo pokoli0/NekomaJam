@@ -6,6 +6,8 @@ public class DecagonoSpawner : MonoBehaviour
 {
 
     public GameObject decagonoPrefab;
+    private float distanciaDesplazamiento = 15.84576f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,9 @@ public class DecagonoSpawner : MonoBehaviour
 
     public void InstanceRoom(Vector3 posicion, Quaternion rotacion)
     {
-        Instantiate(decagonoPrefab, posicion, rotacion);
+        Vector3 desplazamientoZ = Quaternion.Euler(0f, 0f, rotacion.z) * Vector3.forward * distanciaDesplazamiento;
+        Vector3 posicionDesplazada = transform.position+ desplazamientoZ;
+
+        Instantiate(decagonoPrefab, posicionDesplazada, rotacion);
     }
 }
