@@ -48,10 +48,14 @@ public class Telefono : InteractorBase
         gM.nextHabitacion();
         //ACCION DE LA PUERTA
         Vector3 posActual = habitacionActual.transform.position;
-        GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
-        transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transform.parent.parent.gameObject);
-        GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
-        habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
+        if (siguienteHabitacion != null && siguienteTransicion != null)
+        {
+            GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
+            transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transform.parent.parent.gameObject);
+            GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
+            habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
+        }
+        
         paredConPuerta.SetActive(true);
         paredSinPuerta.SetActive(false);
     }

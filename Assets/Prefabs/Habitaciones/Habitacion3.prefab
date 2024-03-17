@@ -354,9 +354,16 @@ PrefabInstance:
       objectReference: {fileID: 2533538498237301153}
     - target: {fileID: 3652978026160755892, guid: 8293f866aec83eb47b6c209b31019c60,
         type: 3}
+      propertyPath: habitacionAnterior
+      value: 
+      objectReference: {fileID: 8413615686759120430, guid: 76a762786a16ccd4499eb010ed1677be,
+        type: 3}
+    - target: {fileID: 3652978026160755892, guid: 8293f866aec83eb47b6c209b31019c60,
+        type: 3}
       propertyPath: habitacionSiguiente
       value: 
-      objectReference: {fileID: 1920271393094158867}
+      objectReference: {fileID: 4964215455685748467, guid: 8143a30855c4ba24090fca3ccb672249,
+        type: 3}
     - target: {fileID: 4224469732185232435, guid: 8293f866aec83eb47b6c209b31019c60,
         type: 3}
       propertyPath: m_Name
