@@ -56,6 +56,12 @@ public class Interactor2000 : MonoBehaviour
 
                 }
 
+                if (hitInfo.collider.GetComponent<TelefonoDodecagono>() != null)
+                {
+                    hitInfo.collider.GetComponent<TelefonoDodecagono>().BaseInteract();
+                    hitInfo.collider.GetComponent<TelefonoDodecagono>().enableInteract(false);
+
+                }
 
                 /*  ** PUERTA - HABITACIONES ** */
                 if (hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)

@@ -35,7 +35,6 @@ public class Telefono : InteractorBase
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
