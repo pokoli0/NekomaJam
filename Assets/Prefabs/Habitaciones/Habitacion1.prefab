@@ -282,6 +282,7 @@ MonoBehaviour:
   rotacionHabitacionSiguiente: {x: 0, y: 180, z: 0}
   rotacionTransicionSiguiente: {x: 0, y: 0, z: 0}
   puertaBorrado: {fileID: 0}
+  puertaFlash: {fileID: 0}
   firstRoom: 1
 --- !u!1001 &8906927383969430767
 PrefabInstance:
@@ -522,10 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692b3c9909bcca240996e50e297ca347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 0.21
+  totalTime: 7.98
   mesa: {fileID: 768011933012861015}
-  mesaPrueba: {fileID: 3557285735100677651, guid: 7bf0c6c741fffd44791b40faf42fc82a,
-    type: 3}
   paredSinPuerta: {fileID: 666913024627752344}
   paredConPuerta: {fileID: 5839632576172436359}
   posicionPasillo: {x: -1.4380877, y: 2.842171e-16, z: 19.987064}

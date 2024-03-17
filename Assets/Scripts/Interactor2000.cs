@@ -80,7 +80,8 @@ public class Interactor2000 : MonoBehaviour
                     }
                     else
                     {
-                        GameManager.Instance.initFlash();
+                        //GameManager.Instance.initFlash();
+                        p.flashMethod();
                     }
                 }
                 /*  ** FLASH ** */

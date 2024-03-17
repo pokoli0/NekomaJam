@@ -10,6 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4582631198923893313, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
+      propertyPath: puertaBorrado
+      value: 
+      objectReference: {fileID: 4970995872852726341}
+    - target: {fileID: 4582631198923893313, guid: 7c716e5049455c44ea113e59008554e3,
+        type: 3}
       propertyPath: siguienteHabitacion
       value: 
       objectReference: {fileID: 1019974965976951232, guid: 398b4000fccc8a4448927a7330e75385,
@@ -54,6 +59,11 @@ PrefabInstance:
         type: 3}
       propertyPath: rotacionHabitacionSiguiente.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582631198923893313, guid: 7c716e5049455c44ea113e59008554e3,
+        type: 3}
+      propertyPath: rotacionTransicionSiguiente.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7281420942148938039, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
@@ -115,3 +125,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c716e5049455c44ea113e59008554e3, type: 3}
+--- !u!1 &4970995872852726341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6325831342049081407, guid: 7c716e5049455c44ea113e59008554e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1384109765899053690}
+  m_PrefabAsset: {fileID: 0}
