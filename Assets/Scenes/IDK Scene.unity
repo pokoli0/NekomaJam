@@ -278,29 +278,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1227594602}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &443660745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8424983918457188521, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1227594602}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &443660750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443660745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7e9e3010298a414dbe344478a442311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: 
-  paredSinPuerta: {fileID: 7497568997838611877}
-  paredConPuerta: {fileID: 1335687202}
-  puerta: {fileID: 1622744241}
-  firstRoom: 0
 --- !u!1001 &600645318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,6 +454,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4881996886770072648, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
+        type: 3}
+      propertyPath: paredSinPuerta
+      value: 
+      objectReference: {fileID: 7497568997838611877}
     - target: {fileID: 4915053288854900216, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
         type: 3}
       propertyPath: m_Name
@@ -499,10 +481,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 676344846}
-    - targetCorrespondingSourceObject: {fileID: 8424983918457188521, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 443660750}
     - targetCorrespondingSourceObject: {fileID: 2205515006616350677, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
         type: 3}
       insertIndex: -1
@@ -582,12 +560,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65363186704fe594c8a7d5cdc711519f, type: 3}
---- !u!1 &1622744241 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3526927675353621178, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1227594602}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1626756846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -729,6 +701,8 @@ MonoBehaviour:
   habitacionAnterior: {fileID: 336913574}
   habitacionSiguiente: {fileID: 0}
   puerta: {fileID: 0}
+  firstRoom: 0
+  telefono: {fileID: 0}
 --- !u!1 &2137013052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 689513509613479710, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
