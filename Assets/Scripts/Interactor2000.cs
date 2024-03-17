@@ -83,6 +83,12 @@ public class Interactor2000 : MonoBehaviour
                         GameManager.Instance.initFlash();
                     }
                 }
+                /*  ** FLASH ** */
+                if (hitInfo.collider.GetComponent<FlashInteract>() != null)
+                {
+                    Debug.Log("Intento interactuar puertaFlash");
+                    hitInfo.collider.GetComponent<FlashInteract>().BaseInteract();
+                }
             }
         }
         else
