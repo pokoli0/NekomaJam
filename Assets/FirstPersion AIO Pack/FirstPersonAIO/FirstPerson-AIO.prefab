@@ -236,7 +236,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 100.2
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -514,3 +514,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   displayText: {fileID: 0}
+  openDoor: {fileID: 8300000, guid: 11712d8f7e2b65148b3cf6b37f21f53b, type: 3}
+  closeDoor: {fileID: 8300000, guid: c41c9c9d358cdb84e8a95110ecd462eb, type: 3}
