@@ -48,6 +48,12 @@ public class Interactor2000 : MonoBehaviour
                     hitInfo.collider.GetComponent<Telefono>().enableInteract(false);
                     hitInfo.collider.GetComponent<Telefono>().CogerTel();
                 }
+                /*  ** PESTAÑEO  ** */
+                if (hitInfo.collider.GetComponent<Blinks>() != null)
+                {
+                    hitInfo.collider.GetComponent<Blinks>().BaseInteract();
+                    hitInfo.collider.GetComponent<Blinks>().enableInteract(false);
+                }
 
                 /*  ** PUERTA ** */
                 if (hitInfo.collider.GetComponent<Puerta>() != null)
