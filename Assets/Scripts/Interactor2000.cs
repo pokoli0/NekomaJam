@@ -77,7 +77,6 @@ public class Interactor2000 : MonoBehaviour
 
                 if (hitInfo.collider.GetComponent<TelefonoDodecagono>() != null)
                 {
-                    PlaySound(openDoor);
                     hitInfo.collider.GetComponent<TelefonoDodecagono>().BaseInteract();
                     hitInfo.collider.GetComponent<TelefonoDodecagono>().enableInteract(false);
                 }
