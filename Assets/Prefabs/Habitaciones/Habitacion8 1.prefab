@@ -68,7 +68,7 @@ PrefabInstance:
     - target: {fileID: 4582631198923893313, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
       propertyPath: rotacionTransicionSiguiente.y
-      value: 0
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 6325831342049081407, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
@@ -128,7 +128,7 @@ PrefabInstance:
     - target: {fileID: 7946352400943608717, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
       propertyPath: m_Name
-      value: Habitacion8
+      value: Habitacion8 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

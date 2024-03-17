@@ -15,7 +15,7 @@ public class Telefono : InteractorBase
     [SerializeField] private Vector3 posicionTransicionSiguiente;
     [SerializeField] private Vector3 rotacionHabitacionSiguiente;
     [SerializeField] private Vector3 rotacionTransicionSiguiente;
-    [SerializeField] private GameObject puertaBorrado;
+    [SerializeField] public GameObject puertaBorrado;
     [SerializeField] private GameObject puertaFlash = null;
     public bool firstRoom = false;
 

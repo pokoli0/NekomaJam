@@ -159,17 +159,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c02aed7f107a0d84a96acd6746d2ed94,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.522213
+      value: -9.142496
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c02aed7f107a0d84a96acd6746d2ed94,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c02aed7f107a0d84a96acd6746d2ed94,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.354709
+      value: -8.065445
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c02aed7f107a0d84a96acd6746d2ed94,
         type: 3}
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decagonoPrefab: {fileID: 2871973205886398165}
-  salaTlfnPrefab: {fileID: 2008819462639226999, guid: 2d21d68106ea2034ba212141bbc58859,
+  salaTlfnPrefab: {fileID: 2008819462639226999, guid: 4349ef0b61533844cb1b4042c2542c5d,
     type: 3}
   previousDoor: {fileID: 0}
   previousDoor2: {fileID: 0}
