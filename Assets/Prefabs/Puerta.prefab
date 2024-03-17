@@ -366,6 +366,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8954699950450176940}
   - component: {fileID: 5197209067854545464}
+  - component: {fileID: 7654181589981191946}
+  - component: {fileID: 6669257876824790541}
   m_Layer: 0
   m_Name: CloseCollider
   m_TagString: close_door
@@ -408,8 +410,50 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.65911, y: 3.1226485, z: 2.2233214}
+  m_Size: {x: 5.65911, y: 3.1226485, z: 1.1}
   m_Center: {x: 0.5356879, y: 1.0613242, z: -2.39}
+--- !u!65 &7654181589981191946
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611160470787850113}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.35, y: 3.1226485, z: 2.8}
+  m_Center: {x: 4.01, y: 1.0613242, z: -1.48}
+--- !u!65 &6669257876824790541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611160470787850113}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.35, y: 3.1226485, z: 2.8}
+  m_Center: {x: -3, y: 1.0613242, z: -1.48}
 --- !u!1 &7267566014893644121
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +662,7 @@ MonoBehaviour:
   promptMessage: 
   animator: {fileID: 1418458721215867440}
   decagono: {fileID: 0}
+  laBuena: 0
 --- !u!64 &8032851686345128202
 MeshCollider:
   m_ObjectHideFlags: 0
