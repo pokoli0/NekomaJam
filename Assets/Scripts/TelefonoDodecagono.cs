@@ -56,6 +56,7 @@ public class TelefonoDodecagono : InteractorBase
 
     protected override void Interact()
     {
+        CogerTel();
         GameManager gM = GameManager.Instance; puerta.SetActive(true);
         Debug.Log("Interactuo telefono");
         gM.getTextManager().showDialogo(gM.getHabitacion());
