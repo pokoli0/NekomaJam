@@ -5,6 +5,7 @@ using UnityEngine;
 //esto es un objeto interactuable por eso hereda de interactorBase
 public class Telefono : InteractorBase
 {
+    [Header("HABITACIONES SETTIGNS")]
 
     [SerializeField] public GameObject siguienteHabitacion;
     [SerializeField] public GameObject siguienteTransicion;
@@ -18,12 +19,27 @@ public class Telefono : InteractorBase
     [SerializeField] public GameObject puertaBorrado;
     [SerializeField] private GameObject puertaFlash = null;
     public bool firstRoom = false;
+    
+
+    [Header("AUDIO SETTINGS")]
+
+    [SerializeField] private AudioClip tonoLlamada;
+    [SerializeField] private AudioClip colgarSonido;
+    public bool sonando = true;
+    private AudioSource source;
 
     private GameManager gM;
     // Start is called before the first frame update
     void Start()
     {
         gM = GameManager.Instance;
+
+        //Inicializas source y reproduces sonido
+        source = GetComponent<AudioSource>();
+        source.clip = tonoLlamada;
+
+        if (sonando) StartSound();
+
         if (firstRoom)
         {
             paredConPuerta.SetActive(false);
@@ -35,10 +51,18 @@ public class Telefono : InteractorBase
             paredSinPuerta.SetActive(false);
         }
     }
-
-    void Update()
+    public void StartSound()
     {
-        
+        source.loop = true;
+        source.Play();
+    }
+
+    public void CogerTel()
+    {
+        source.Stop();
+        sonando = false;
+        source.clip = colgarSonido;
+        source.Play();
     }
 
     protected override void Interact()
