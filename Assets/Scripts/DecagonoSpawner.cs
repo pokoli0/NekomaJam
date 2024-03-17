@@ -86,7 +86,7 @@ public class DecagonoSpawner : MonoBehaviour
 
         else
         {
-            previousDoor.transform.SetParent(null);
+            previousDoor.transform.SetParent(this.gameObject.transform);
 
             if (salaTelefono != null)
             {
@@ -100,9 +100,12 @@ public class DecagonoSpawner : MonoBehaviour
 
             Vector3 desplazamientoZ = Quaternion.Euler(0f, rotacion.eulerAngles.y - 180, 0f) * Vector3.forward * distanciaDesplazamiento2;
             Vector3 posicionDesplazada = transform.position + desplazamientoZ;
-
+            
             GameObject salaTLF = Instantiate(salaTlfnPrefab, posicionDesplazada, Quaternion.Euler(0f, rotacion.eulerAngles.y, 0f));
-            Destroy(salaTLF.transform.GetChild(2).gameObject);
+
+            puerta.transform.parent.parent.SetParent(salaTLF.transform);
+            salaTLF.GetComponentInChildren<Telefono>().puertaBorrado = puerta.transform.parent.parent.gameObject;
+            //Destroy(salaTLF.transform.GetChild(2).gameObject);
             Destroy(previousDoor2);
         }
      
