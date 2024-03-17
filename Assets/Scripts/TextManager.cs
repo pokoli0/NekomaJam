@@ -60,5 +60,6 @@ public class TextManager : MonoBehaviour
         dialogueScript_.StartDialogue();
     }
 
-    public bool IsWritting() { return dialogueScript_.writting(); }
+    public bool IsWritting() { return dialogueScript_.writting(); } //Xdddddddd
+    public bool hasFinished() { return dialogueScript_.hasFinished; } //Xdddddddd
 }

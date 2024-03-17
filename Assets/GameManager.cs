@@ -85,4 +85,12 @@ public class GameManager : MonoBehaviour
     {
         currHab++;
     }
+    public bool isWriting( )
+    {
+        return textManager_.IsWritting();
+    }
+    public bool hasFinished()
+    {
+        return textManager_.hasFinished();
+    }
 }
