@@ -267,7 +267,7 @@ MonoBehaviour:
   promptMessage: iuytfdfghj
   siguienteHabitacion: {fileID: 1920271393094158867, guid: 6135987b9305d5948b510f63a6035144,
     type: 3}
-  siguienteTransicion: {fileID: 7441644070962818007, guid: c08d24fd4866d1d49b2579493443456e,
+  siguienteTransicion: {fileID: 8413615686759120430, guid: 76a762786a16ccd4499eb010ed1677be,
     type: 3}
   habitacionActual: {fileID: 4476261031295948181}
   paredSinPuerta: {fileID: 4508747682924022266}
@@ -384,7 +384,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 49.927784
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
@@ -394,7 +394,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -27.29923
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}

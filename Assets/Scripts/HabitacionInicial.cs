@@ -10,7 +10,7 @@ public class HabitacionInicial : MonoBehaviour
     private float currentTime; // Tiempo actual de la cuenta atrás
     [SerializeField] private GameObject mesa;
     [SerializeField] private GameObject mesaPrueba;
-    [SerializeField] private GameObject puerta;
+    //[SerializeField] private GameObject puerta;
     [SerializeField] private GameObject paredSinPuerta;
     [SerializeField] private GameObject paredConPuerta;
     public Vector3 posicionPasillo = new Vector3(-1.4380877f, 2.84217088e-16f, 19.9870644f);
@@ -20,7 +20,7 @@ public class HabitacionInicial : MonoBehaviour
         currentTime = totalTime;
     
         mesa.SetActive(false);
-        puerta.SetActive(false);
+        //puerta.SetActive(false);
         paredConPuerta.SetActive(false);
         paredSinPuerta.SetActive(true);
     }

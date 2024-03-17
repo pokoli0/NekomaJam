@@ -14,7 +14,6 @@ public class Interactor2000 : MonoBehaviour
 
     [SerializeField] public TMP_Text displayText; // el "Pulsa E"
 
-    // Start is called before the first frame update
     void Start()
     {
         cam = GetComponent<FirstPersonAIO>().playerCamera;
@@ -25,7 +24,6 @@ public class Interactor2000 : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
@@ -58,12 +56,6 @@ public class Interactor2000 : MonoBehaviour
 
                 }
 
-                /*  ** PUERTA - DESPLAZABLE ** */
-                if (hitInfo.collider.GetComponent<PuertaDesplazable>() != null)
-                {   
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                    
-                }
 
                 /*  ** PUERTA - HABITACIONES ** */
                 if (hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)
@@ -84,21 +76,6 @@ public class Interactor2000 : MonoBehaviour
                     {
                         GameManager.Instance.initFlash();
                     }
-                }
-            }
-            if(hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    hitInfo.collider.GetComponent<PuertaHabitaciones>().BaseInteract();
-                }
-            }
-            if(hitInfo.collider.GetComponent<PuertaSola>() != null)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                    hitInfo.collider.GetComponent<PuertaSola>().closed = false;
                 }
             }
         }
