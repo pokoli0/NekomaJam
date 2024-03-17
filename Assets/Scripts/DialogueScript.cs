@@ -34,6 +34,10 @@ public class DialogueScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            textSpeed = -0.04f;
+        }
     }
 public void StartDialogue() {
         hasFinished = false;
