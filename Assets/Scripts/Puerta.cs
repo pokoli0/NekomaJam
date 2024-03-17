@@ -33,8 +33,9 @@ public class Puerta : InteractorBase
 
     protected override void Interact()
     {
+        GameManager gameManager = GameManager.Instance;
         closed = false;
-        if(canInteract) animator.SetTrigger("Open");
+        if(canInteract && gameManager.hasFinished()) animator.SetTrigger("Open");
 
         if (decagono != null)
         {

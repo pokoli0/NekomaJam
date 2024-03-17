@@ -37,20 +37,11 @@ public class PuertaHabitaciones : InteractorBase
 
     public void close()
     {
+        gameManager = GameManager.Instance;
         animator.SetTrigger("Close");
-        Invoke("afterCloseEvent", 0.8f);
+        gameManager.DestroyInOneSecond(habitacionAnterior);
     }
 
-    public void afterCloseEvent()
-    {
-        if (habitacionAnterior != null)
-        {
-            // habitacionAnterior.parent 
-
-            Destroy(habitacionAnterior);
-        }
-
-    }
     public void setHabitacionAnterior(GameObject habitacion)
     {
         habitacionAnterior = habitacion;
