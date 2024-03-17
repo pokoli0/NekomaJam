@@ -68,6 +68,7 @@ public void StartDialogue() {
                 //Reset index 
                 dialogueText.text = string.Empty;
                 isWritting = false;
+                hasFinished = true;
                 index = 0;
 
             }

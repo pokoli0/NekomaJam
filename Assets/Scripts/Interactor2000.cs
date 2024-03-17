@@ -44,8 +44,8 @@ public class Interactor2000 : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     //Todo esto todavia esta por ver
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                    hitInfo.collider.GetComponent<InteractorBase>().enableInteract(false);
+                    hitInfo.collider.GetComponent<Telefono>().BaseInteract();
+                    hitInfo.collider.GetComponent<Telefono>().enableInteract(false);
                 }
             }
 
@@ -64,14 +64,14 @@ public class Interactor2000 : MonoBehaviour
                 // Debug.Log("estoy mirando un interactuable")
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                    hitInfo.collider.GetComponent<PuertaDesplazable>().BaseInteract();
                 }
             }
             if(hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                    hitInfo.collider.GetComponent<PuertaHabitaciones>().BaseInteract();
                 }
             }
             if(hitInfo.collider.GetComponent<PuertaSola>() != null)

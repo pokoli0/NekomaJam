@@ -6,36 +6,53 @@ using UnityEngine;
 public class Telefono : InteractorBase
 {
 
-    [SerializeField] private GameObject puerta;
+    [SerializeField] private GameObject siguienteHabitacion;
+    [SerializeField] private GameObject siguienteTransicion;
+    [SerializeField] private GameObject habitacionActual;
     [SerializeField] private GameObject paredSinPuerta;
     [SerializeField] private GameObject paredConPuerta;
+    [SerializeField] private Vector3 posicionHabitacionSiguiente;
+    [SerializeField] private Vector3 posicionTransicionSiguiente;
+    [SerializeField] private Vector3 rotacionHabitacionSiguiente;
+    [SerializeField] private Vector3 rotacionTransicionSiguiente;
+    [SerializeField] private GameObject puertaBorrado;
+    public bool firstRoom = false;
 
     private GameManager gM;
     // Start is called before the first frame update
     void Start()
     {
         gM = GameManager.Instance;
-        if(puerta != null)
+        if (firstRoom)
         {
-            puerta.GetComponent<PuertaHabitaciones>().enabled = false;
+            paredConPuerta.SetActive(false);
+            paredSinPuerta.SetActive(true);
+        }
+        else
+        {
+            paredConPuerta.SetActive(true);
+            paredSinPuerta.SetActive(false);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gM.hasFinished() && (puerta != null))
-        {
-            puerta.GetComponent<PuertaHabitaciones>().enabled = true;
-        }
+        Debug.Log(canInteract);
     }
 
     protected override void Interact()
     {
+        if(puertaBorrado != null) Destroy(puertaBorrado);
+        Debug.Log("Interactuo telefono");
         gM.getTextManager().showDialogo(gM.getHabitacion());
         gM.nextHabitacion();
         //ACCION DE LA PUERTA
-        puerta.SetActive(true);
+        Vector3 posActual = habitacionActual.transform.position;
+        GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
+        transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transform.parent.parent.gameObject);
+        GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
+        habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
         paredConPuerta.SetActive(true);
         paredSinPuerta.SetActive(false);
     }

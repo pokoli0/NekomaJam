@@ -10,7 +10,6 @@ public class PuertaDesplazable : InteractorBase
 
     private Vector3 startPosition;
     private Vector3 targetPosition;
-    private float velocity;
 
     void Start()
     {
@@ -20,24 +19,27 @@ public class PuertaDesplazable : InteractorBase
     }
     protected override void Interact()
     {
+        Debug.Log("Interactuo desplazable");
         if (numOfInteracts > 0)
         {
+            Debug.Log("Me desplazo" + numOfInteracts);
             startPosition = puertaYPared.transform.position;
             targetPosition = startPosition + new Vector3(0, 0, -20);
             StartCoroutine(LerpPosition(targetPosition, duration));
-            numOfInteracts--;
         }
         if (numOfInteracts == 0) {
-            this.GetComponentInParent<PuertaHabitaciones>().enabled = true;
+            GetComponent<PuertaHabitaciones>().enabled = true;
         }
         
     }
     IEnumerator LerpPosition(Vector3 targetPosition, float duration)
     {
+
         float time = 0f;
 
         while (time < duration)
         {
+            numOfInteracts--;
             puertaYPared.transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
             time += Time.deltaTime;
             yield return null;

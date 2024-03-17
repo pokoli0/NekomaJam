@@ -9,11 +9,13 @@ public class PuertaHabitaciones : InteractorBase
     [SerializeField] public GameObject habitacionAnterior;
     [SerializeField] public GameObject habitacionSiguiente;
     [SerializeField] public GameObject puerta;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        gameManager = GameManager.Instance;
     }
 
     // Update is called once per frame
@@ -24,14 +26,18 @@ public class PuertaHabitaciones : InteractorBase
 
     protected override void Interact()
     {
-        Debug.Log("Interactuo puerta");
-        if (canInteract) animator.SetTrigger("Open");
+        gameManager = GameManager.Instance;
+        Debug.Log("Interactuo puerta"+ gameManager.hasFinished());
+        if (canInteract && gameManager.hasFinished())
+        {
+            animator.SetTrigger("Open");
+            enableInteract(false);
+        }
     }
 
     public void close()
     {
         animator.SetTrigger("Close");
-        enableInteract(false);
         Invoke("afterCloseEvent", 2f);
     }
 
@@ -40,9 +46,13 @@ public class PuertaHabitaciones : InteractorBase
         if (habitacionAnterior != null)
         {
             // habitacionAnterior.parent 
-            puerta.transform.SetParent(habitacionSiguiente.transform);
+            
             Destroy(habitacionAnterior);
         }
 
+    }
+    public void setHabitacionAnterior(GameObject habitacion)
+    {
+        habitacionAnterior = habitacion;
     }
 }
