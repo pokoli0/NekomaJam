@@ -41,18 +41,19 @@ public class Interactor2000 : MonoBehaviour
             // Tal vez poner click izquierdo 
             if (Input.GetKeyDown(KeyCode.E))
             {
+                /*  ** PESTAÑEO  ** */
+                if (hitInfo.collider.GetComponent<Blinks>() != null)
+                {
+                    Debug.Log("Deberia pestañear 2000");
+                    hitInfo.collider.GetComponent<Blinks>().BaseInteract();
+                    hitInfo.collider.GetComponent<Blinks>().enableInteract(false);
+                }
                 /*  ** TELEFONO ** */
                 if (hitInfo.collider.GetComponent<Telefono>() != null)
                 {
                     hitInfo.collider.GetComponent<Telefono>().BaseInteract();
                     hitInfo.collider.GetComponent<Telefono>().enableInteract(false);
                     hitInfo.collider.GetComponent<Telefono>().CogerTel();
-                }
-                /*  ** PESTAÑEO  ** */
-                if (hitInfo.collider.GetComponent<Blinks>() != null)
-                {
-                    hitInfo.collider.GetComponent<Blinks>().BaseInteract();
-                    hitInfo.collider.GetComponent<Blinks>().enableInteract(false);
                 }
 
                 /*  ** PUERTA ** */
