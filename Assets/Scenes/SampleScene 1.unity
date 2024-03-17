@@ -724,9 +724,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
-  distanciaMaxima: 3
+  distanciaMaxima: 5
   velocidadMovimiento: 5
+  suavizado: 0.5
+  offsetPuerta: 5
+  offssetMultiplier: 0.05
   puertaFinal: {fileID: 307309688}
+  pasilloPrefab: {fileID: 2981296627970010345, guid: 8933cb0a0720fa34c80b9c486104bf4a,
+    type: 3}
 --- !u!64 &1045385006
 MeshCollider:
   m_ObjectHideFlags: 0
