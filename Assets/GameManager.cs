@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
     public void DestroyInOneSecond(GameObject gameObj)
     {
         objectToDestroy = gameObj;
-        Invoke("destroyGameObject", 0.8f);
+        Invoke("destroyGameObject", 1.5f);
     }
 
     public void destroyGameObject()
