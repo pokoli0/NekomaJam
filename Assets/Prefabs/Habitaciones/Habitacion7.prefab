@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: 7281420942148938039, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7281420942148938039, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
@@ -36,7 +36,7 @@ PrefabInstance:
     - target: {fileID: 7281420942148938039, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7281420942148938039, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: 7281420942148938039, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7281420942148938039, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 7946352400943608717, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
       propertyPath: m_Name
-      value: Habitacion7 Variant
+      value: Habitacion7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
