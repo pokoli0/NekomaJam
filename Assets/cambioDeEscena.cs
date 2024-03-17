@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class cambioDeEscena : MonoBehaviour
 {
     [SerializeField] GameObject fadein;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class cambioDeEscena : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         Instantiate(fadein, transform);
-        Invoke("CargarEscena",4f);
+        Invoke("CargarEscena",5f);
     }
 public void CargarEscena()
     {
