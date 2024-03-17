@@ -14,8 +14,19 @@ public class Interactor2000 : MonoBehaviour
 
     [SerializeField] public TMP_Text displayText; // el "Pulsa E"
 
+    [SerializeField] private AudioClip openDoor;
+    [SerializeField] private AudioClip closeDoor;
+    private AudioSource playerSource;
+
+    void PlaySound(AudioClip a )
+    {
+        playerSource.clip = a;
+        playerSource.Play();
+    }
+
     void Start()
     {
+        playerSource = GetComponent<AudioSource>();
         cam = GetComponent<FirstPersonAIO>().playerCamera;
         if (displayText != null)
         {
@@ -59,26 +70,28 @@ public class Interactor2000 : MonoBehaviour
                 /*  ** PUERTA ** */
                 if (hitInfo.collider.GetComponent<Puerta>() != null)
                 {
+                    PlaySound(openDoor);
                     hitInfo.collider.GetComponent<Puerta>().BaseInteract();
-
                 }
 
                 if (hitInfo.collider.GetComponent<TelefonoDodecagono>() != null)
                 {
+                    PlaySound(openDoor);
                     hitInfo.collider.GetComponent<TelefonoDodecagono>().BaseInteract();
                     hitInfo.collider.GetComponent<TelefonoDodecagono>().enableInteract(false);
-
                 }
 
                 /*  ** PUERTA - HABITACIONES ** */
                 if (hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)
                 {
+                    PlaySound(openDoor);
                     hitInfo.collider.GetComponent<PuertaHabitaciones>().BaseInteract();
                 }
 
                 /*  ** PUERTA - SOLA ** */
                 if (hitInfo.collider.GetComponent<PuertaSola>() != null)
                 {
+                    PlaySound(openDoor);
                     hitInfo.collider.GetComponent<PuertaSola>().BaseInteract();
                     PuertaSola p = hitInfo.collider.GetComponent<PuertaSola>();
                     if (!p.CanCross())
@@ -111,19 +124,33 @@ public class Interactor2000 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("sonar_telefono")){
-            
-            if (!other.gameObject.GetComponent<ActivarTelefono>().telefono.sonando)
+            //Sala normal
+            if(other.gameObject.GetComponent<ActivarTelefono>().telefono != null)
             {
-                other.gameObject.GetComponent<ActivarTelefono>().telefono.StartSound();
-                other.enabled = false;
+                if (!other.gameObject.GetComponent<ActivarTelefono>().telefono.sonando)
+                {
+                    other.gameObject.GetComponent<ActivarTelefono>().telefono.StartSound();
+                    other.enabled = false;
+                }
             }
+            //Sala dodecagono
+            if(other.gameObject.GetComponent<ActivarTelefono>().telefonoDodec != null)
+            {
+                if (!other.gameObject.GetComponent<ActivarTelefono>().telefonoDodec.sonando)
+                {
+
+                    other.gameObject.GetComponent<ActivarTelefono>().telefonoDodec.StartSound();
+                    other.enabled = false;
+                }
+            }
+            
 
         }
         if(other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<PuertaSola>() != null)
         {
 
             PuertaSola p = other.GetComponentInChildren<PuertaSola>();
-            
+            PlaySound(closeDoor);
             if (p.closed)
             {
                 p.enableCross(true);
@@ -133,13 +160,14 @@ public class Interactor2000 : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<PuertaHabitaciones>() != null)
         {
+            PlaySound(closeDoor);
             other.GetComponentInChildren<PuertaHabitaciones>().close();
         }
 
         //Comprobacion ultima porque 
         else if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<Puerta>() != null)
         {
-
+            PlaySound(closeDoor);
             if (other.GetComponentInChildren<Puerta>() != null)
             {
                 other.GetComponentInChildren<Puerta>().close();

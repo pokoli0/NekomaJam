@@ -139,10 +139,35 @@ PrefabInstance:
       propertyPath: seAcerca
       value: 
       objectReference: {fileID: 2639546227007174230}
+    - target: {fileID: 1714360767025996053, guid: c08d24fd4866d1d49b2579493443456e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804086010644628500, guid: c08d24fd4866d1d49b2579493443456e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762497700994747276, guid: c08d24fd4866d1d49b2579493443456e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767442894663231244, guid: c08d24fd4866d1d49b2579493443456e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7441644070962818007, guid: c08d24fd4866d1d49b2579493443456e,
         type: 3}
       propertyPath: m_Name
-      value: Transicion2 (1) Variant
+      value: Transicion2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433659304710460401, guid: c08d24fd4866d1d49b2579493443456e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1649551037737563549, guid: c08d24fd4866d1d49b2579493443456e, type: 3}

@@ -15,6 +15,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4582631198923893313, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
+      propertyPath: sonando
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582631198923893313, guid: 7c716e5049455c44ea113e59008554e3,
+        type: 3}
       propertyPath: firstRoom
       value: 0
       objectReference: {fileID: 0}

@@ -79,14 +79,14 @@ public class Telefono : InteractorBase
         if (siguienteHabitacion != null && siguienteTransicion != null)
         {
             GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
-            transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(habitacionActual);
+            if (transicion.GetComponentInChildren<PuertaHabitaciones>() != null) transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(habitacionActual);
             GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
-            habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
+            if (habitacion.GetComponentInChildren<PuertaHabitaciones>() != null) habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
         }
         else if (siguienteTransicion != null)
         {
             GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
-            transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transform.parent.parent.gameObject);
+            if (transicion.GetComponentInChildren<PuertaHabitaciones>() != null) transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transform.parent.parent.gameObject);
         }
         
         paredConPuerta.SetActive(true);
