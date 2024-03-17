@@ -111,12 +111,26 @@ public class Interactor2000 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("sonar_telefono")){
-            
-            if (!other.gameObject.GetComponent<ActivarTelefono>().telefono.sonando)
+            //Sala normal
+            if(other.gameObject.GetComponent<ActivarTelefono>().telefono != null)
             {
-                other.gameObject.GetComponent<ActivarTelefono>().telefono.StartSound();
-                other.enabled = false;
+                if (!other.gameObject.GetComponent<ActivarTelefono>().telefono.sonando)
+                {
+                    other.gameObject.GetComponent<ActivarTelefono>().telefono.StartSound();
+                    other.enabled = false;
+                }
             }
+            //Sala dodecagono
+            if(other.gameObject.GetComponent<ActivarTelefono>().telefonoDodec != null)
+            {
+                if (!other.gameObject.GetComponent<ActivarTelefono>().telefonoDodec.sonando)
+                {
+
+                    other.gameObject.GetComponent<ActivarTelefono>().telefonoDodec.StartSound();
+                    other.enabled = false;
+                }
+            }
+            
 
         }
         if(other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<PuertaSola>() != null)

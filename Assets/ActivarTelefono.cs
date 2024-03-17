@@ -5,7 +5,5 @@ using UnityEngine;
 public class ActivarTelefono : MonoBehaviour
 {
     [SerializeField] public Telefono telefono;
-
-
-    
+    [SerializeField] public TelefonoDodecagono telefonoDodec;
 }
