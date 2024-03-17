@@ -74,7 +74,15 @@ public class Interactor2000 : MonoBehaviour
                 if (hitInfo.collider.GetComponent<PuertaSola>() != null)
                 {
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                    hitInfo.collider.GetComponent<PuertaSola>().closed = false;
+                    PuertaSola p = hitInfo.collider.GetComponent<PuertaSola>();
+                    if (!p.CanCross())
+                    {
+                        p.closed = false;
+                    }
+                    else
+                    {
+                        GameManager.Instance.initFlash();
+                    }
                 }
             }
         }

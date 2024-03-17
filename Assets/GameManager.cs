@@ -11,8 +11,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private TextManager textManager_;
-
     public TextManager getTextManager() { return textManager_; }
+
+    [SerializeField]
+    private FlashComponent flashCanvas_;
+    public void initFlash() { flashCanvas_.startFlash(); }
 
     private static GameManager _instance;
 
