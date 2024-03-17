@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject player_;
 
+    public AudioClip[] sonidos;
+
     public GameObject getPlayer() { return player_; }
 
     [SerializeField]
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
     public void initFlash() { flashCanvas_.startFlash(); }
 
     private static GameManager _instance;
+
 
     // Instancia publica de GameManager
     public static GameManager Instance
@@ -95,5 +98,12 @@ public class GameManager : MonoBehaviour
     public bool hasFinished()
     {
         return textManager_.hasFinished();
+    }
+
+    public void Playsound(int x)
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = sonidos[x];
+        audio.Play();
     }
 }
