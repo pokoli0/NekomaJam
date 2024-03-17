@@ -273,7 +273,7 @@ MonoBehaviour:
   paredSinPuerta: {fileID: 4508747682924022266}
   paredConPuerta: {fileID: 1751618506541006764}
   posicionHabitacionSiguiente: {x: -0.15218425, y: 0, z: -90.24469}
-  posicionTransicionSiguiente: {x: -1.5141778, y: 0, z: -3.372635}
+  posicionTransicionSiguiente: {x: -1.5141777, y: 0, z: -3.372635}
   rotacionHabitacionSiguiente: {x: 0, y: 0, z: 0}
   rotacionTransicionSiguiente: {x: 0, y: 0, z: 0}
   puertaBorrado: {fileID: 1709539994933613909}
@@ -384,7 +384,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.927784
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
@@ -394,7 +394,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.29923
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}

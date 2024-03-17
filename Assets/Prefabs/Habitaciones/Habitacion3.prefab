@@ -122,7 +122,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15218425
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -90.24469
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
@@ -588,15 +588,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: iuytfdfghj
-  siguienteHabitacion: {fileID: 0}
-  siguienteTransicion: {fileID: 7441644070962818007, guid: c08d24fd4866d1d49b2579493443456e,
+  siguienteHabitacion: {fileID: 7946352400943608717, guid: 7c716e5049455c44ea113e59008554e3,
+    type: 3}
+  siguienteTransicion: {fileID: 4964215455685748467, guid: 8143a30855c4ba24090fca3ccb672249,
     type: 3}
   habitacionActual: {fileID: 1920271393094158867}
   paredSinPuerta: {fileID: 2464627484448022836}
   paredConPuerta: {fileID: 4392712613592113194}
-  posicionHabitacionSiguiente: {x: 0, y: 0, z: 0}
-  posicionTransicionSiguiente: {x: -1.5141778, y: 0, z: -3.372635}
-  rotacionHabitacionSiguiente: {x: 0, y: 0, z: 0}
-  rotacionTransicionSiguiente: {x: 0, y: 0, z: 0}
+  posicionHabitacionSiguiente: {x: 40.219925, y: -0.003452152, z: 56.247406}
+  posicionTransicionSiguiente: {x: 40.72211, y: -0.003452152, z: 50.932396}
+  rotacionHabitacionSiguiente: {x: 0, y: 180, z: 0}
+  rotacionTransicionSiguiente: {x: 0, y: 90, z: 0}
   puertaBorrado: {fileID: 2533538498237301153}
   firstRoom: 0
