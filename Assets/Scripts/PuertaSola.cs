@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,10 @@ using UnityEngine;
 public class PuertaSola : Puerta
 {
     private bool canCross = false;
+    [SerializeField] private GameObject habitacionTeleport;
+    [SerializeField] private GameObject habitacionActual;
+    [SerializeField] private GameObject flash;
+    [SerializeField] private Vector3 posToTeleport;
 
     public bool CanCross() {  return canCross; }
 
@@ -44,5 +49,12 @@ public class PuertaSola : Puerta
 
         boxCollider.center = nuevoCentro;
         
+    }
+
+    internal void flashMethod()
+    {
+        Instantiate(flash, habitacionActual.transform.position + posToTeleport, Quaternion.identity);
+        Instantiate(habitacionTeleport, habitacionActual.transform.position + posToTeleport, Quaternion.identity);
+        Destroy(habitacionActual);
     }
 }

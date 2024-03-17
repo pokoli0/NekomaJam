@@ -277,6 +277,7 @@ MonoBehaviour:
   rotacionHabitacionSiguiente: {x: 0, y: 0, z: 0}
   rotacionTransicionSiguiente: {x: 0, y: 0, z: 0}
   puertaBorrado: {fileID: 1709539994933613909}
+  puertaFlash: {fileID: 0}
   firstRoom: 0
 --- !u!1001 &3249863109327520102
 PrefabInstance:
@@ -291,6 +292,12 @@ PrefabInstance:
       propertyPath: puerta
       value: 
       objectReference: {fileID: 1709539994933613909}
+    - target: {fileID: 3652978026160755892, guid: 8293f866aec83eb47b6c209b31019c60,
+        type: 3}
+      propertyPath: habitacionAnterior
+      value: 
+      objectReference: {fileID: 8413615686759120430, guid: 76a762786a16ccd4499eb010ed1677be,
+        type: 3}
     - target: {fileID: 3652978026160755892, guid: 8293f866aec83eb47b6c209b31019c60,
         type: 3}
       propertyPath: habitacionSiguiente
@@ -384,7 +391,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.7762003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
@@ -394,7 +401,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 14.576113
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
