@@ -5,10 +5,11 @@ using UnityEngine;
 //esto es un objeto interactuable por eso hereda de interactorBase
 public class Telefono : InteractorBase
 {
+    [Header("HABITACIONES SETTIGNS")]
 
-    [SerializeField] private GameObject siguienteHabitacion;
-    [SerializeField] private GameObject siguienteTransicion;
-    [SerializeField] private GameObject habitacionActual;
+    [SerializeField] public GameObject siguienteHabitacion;
+    [SerializeField] public GameObject siguienteTransicion;
+    [SerializeField] public GameObject habitacionActual;
     [SerializeField] private GameObject paredSinPuerta;
     [SerializeField] private GameObject paredConPuerta;
     [SerializeField] private Vector3 posicionHabitacionSiguiente;
@@ -18,12 +19,27 @@ public class Telefono : InteractorBase
     [SerializeField] public GameObject puertaBorrado;
     [SerializeField] private GameObject puertaFlash = null;
     public bool firstRoom = false;
+    
+
+    [Header("AUDIO SETTINGS")]
+
+    [SerializeField] private AudioClip tonoLlamada;
+    [SerializeField] private AudioClip colgarSonido;
+    public bool sonando = true;
+    private AudioSource source;
 
     private GameManager gM;
     // Start is called before the first frame update
     void Start()
     {
         gM = GameManager.Instance;
+
+        //Inicializas source y reproduces sonido
+        source = GetComponent<AudioSource>();
+        source.clip = tonoLlamada;
+
+        if (sonando) StartSound();
+
         if (firstRoom)
         {
             paredConPuerta.SetActive(false);
@@ -35,16 +51,24 @@ public class Telefono : InteractorBase
             paredSinPuerta.SetActive(false);
         }
     }
-
-    void Update()
+    public void StartSound()
     {
-        
+        source.loop = true;
+        source.Play();
+    }
+
+    public void CogerTel()
+    {
+        source.Stop();
+        sonando = false;
+        source.clip = colgarSonido;
+        source.Play();
     }
 
     protected override void Interact()
     {
         if (puertaFlash != null) puertaFlash.GetComponent<FlashInteract>().enabled = true;
-        if (puertaBorrado != null) Destroy(puertaBorrado);
+        if (puertaBorrado != null) DestroyImmediate(puertaBorrado,true);
         Debug.Log("Interactuo telefono");
         gM.getTextManager().showDialogo(gM.getHabitacion());
         gM.nextHabitacion();
@@ -53,6 +77,7 @@ public class Telefono : InteractorBase
         if (siguienteHabitacion != null && siguienteTransicion != null)
         {
             GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
+            transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(habitacionActual);
             GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
             habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
         }
