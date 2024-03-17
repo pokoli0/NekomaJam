@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849587326819034298}
   - component: {fileID: 6269134722208822496}
+  - component: {fileID: 4383505301086643151}
   m_Layer: 0
   m_Name: InteractionCollider
   m_TagString: sonar_telefono
@@ -86,6 +87,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.6168513, y: 3.2395627, z: 3.3190966}
   m_Center: {x: -0.26108527, y: 1.1197811, z: -1.1595483}
+--- !u!114 &4383505301086643151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211084502329324877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c0e9c75e39d597429a32ba28e3d24c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telefono: {fileID: 0}
+  telefonoDodec: {fileID: 0}
 --- !u!1001 &390216803376566168
 PrefabInstance:
   m_ObjectHideFlags: 0
