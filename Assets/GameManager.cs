@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     private static GameManager _instance;
 
+    private GameObject objectToDestroy;
+
 
     // Instancia publica de GameManager
     public static GameManager Instance
@@ -57,15 +59,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public enum Habitaciones{
+    public enum Habitaciones {
         h0 = 0, // no sirve para nada, solo es para que cuadren los indices y las ids de los dialogos
-        hab_1 = 1, 
-        hab_2 = 2, 
-        hab_3 = 3, 
-        hab_4 = 4, 
-        hab_5 = 5, 
-        hab_6 = 6, 
-        hab_7 = 7, 
+        hab_1 = 1,
+        hab_2 = 2,
+        hab_3 = 3,
+        hab_4 = 4,
+        hab_5 = 5,
+        hab_6 = 6,
+        hab_7 = 7,
         hab_8 = 8
     }
 
@@ -80,7 +82,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public int getHabitacion() { return ((int)currHab); }
@@ -91,7 +93,7 @@ public class GameManager : MonoBehaviour
     {
         currHab++;
     }
-    public bool isWriting( )
+    public bool isWriting()
     {
         return textManager_.IsWritting();
     }
@@ -105,5 +107,21 @@ public class GameManager : MonoBehaviour
         AudioSource audio = GetComponent<AudioSource>();
         audio.clip = sonidos[x];
         audio.Play();
+    }
+
+    public void DestroyInOneSecond(GameObject gameObj)
+    {
+        objectToDestroy = gameObj;
+        Invoke("destroyGameObject", 0.8f);
+    }
+
+    public void destroyGameObject()
+    {
+        if (objectToDestroy != null)
+        {
+            // habitacionAnterior.parent 
+            Debug.Log("Se destrruye habitacion" + gameObject);
+            Destroy(gameObject);
+        }
     }
 }
