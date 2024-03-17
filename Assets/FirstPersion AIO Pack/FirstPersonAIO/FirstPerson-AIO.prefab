@@ -432,13 +432,13 @@ MonoBehaviour:
   headbobSideMovement: 0.5
   jumpLandIntensity: 3
   enableAudioSFX: 1
-  Volume: 5
+  Volume: 3.2
   jumpSound: {fileID: 0}
   landSound: {fileID: 0}
   footStepSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8d6ec80cdc0b59c4e996d88efc0b85b1, type: 3}
+  - {fileID: 8300000, guid: 674d67a75b5fde94a9fdb06bd08f5c48, type: 3}
+  - {fileID: 8300000, guid: 60600ce557a123a4ba8f5d89df620668, type: 3}
   fsmode: 1
   dynamicFootstep:
     materialMode: 0
@@ -460,17 +460,17 @@ MonoBehaviour:
     woodClipSet: []
     metalAndGlassClipSet: []
     grassClipSet:
-    - {fileID: 8300000, guid: e70c5fa5ed6b97f41aa555d63ca56d42, type: 3}
-    - {fileID: 8300000, guid: d3947cf2c6783a447bd0dae10cd8bb21, type: 3}
-    - {fileID: 8300000, guid: 41b975e693999f942b5755a8f054c4ce, type: 3}
-    - {fileID: 8300000, guid: 818617f6fe74a6345a5babff80a756e2, type: 3}
-    - {fileID: 8300000, guid: 2667de89ddda8dc409eaf8f8261d1d8c, type: 3}
-    - {fileID: 8300000, guid: 76909016e12b7b4469602526ddc6a164, type: 3}
-    - {fileID: 8300000, guid: 0533ad72641beb64c84742701ea7fcd4, type: 3}
-    - {fileID: 8300000, guid: 37aa905a30faf0d45a213f924449a6fb, type: 3}
-    - {fileID: 8300000, guid: 5991900ee6498594ab6d0c668e329eb1, type: 3}
-    - {fileID: 8300000, guid: e899671e45e608e4db37f6d6701c35ba, type: 3}
-    - {fileID: 8300000, guid: 01c377cd295d33a4db93c9467d59a6dd, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     dirtAndGravelClipSet: []
     rockAndConcreteClipSet:
     - {fileID: 8300000, guid: a9e804a8165699a49bceb84d083a34a6, type: 3}
@@ -513,3 +513,4 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 64
+  displayText: {fileID: 0}
