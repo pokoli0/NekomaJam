@@ -18,13 +18,12 @@ public class PuertaSola : Puerta
         
         if (canCross)
         {
-            Destroy(this.gameObject.transform.parent.gameObject.transform.parent.gameObject);
+            // Destroy(this.gameObject.transform.parent.gameObject.transform.parent.gameObject);
             // tp con delay
             // tp a sala y ceguera,
 
         }
         else {
-            Debug.Log("Se deberia de cerrar");
             //Cambia el collider de lado para que no se cierre de nuevo en el mismo 
             swapCollider();
             base.close();
@@ -39,7 +38,11 @@ public class PuertaSola : Puerta
 
     public void swapCollider()
     {
-        Vector3 v = gameObject.transform.parent.GetComponent<BoxCollider>().center;
-        gameObject.transform.parent.GetComponent<BoxCollider>().center.Set(v.x * -1, v.y, v.z * -1);
+
+        var boxCollider = gameObject.transform.parent.GetComponent<BoxCollider>();
+        Vector3 nuevoCentro = Vector3.Scale(boxCollider.center, new Vector3(-1, 1, -1));
+
+        boxCollider.center = nuevoCentro;
+        
     }
 }

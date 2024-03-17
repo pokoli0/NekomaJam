@@ -35,48 +35,43 @@ public class Interactor2000 : MonoBehaviour
 
         if(Physics.Raycast(ray, out hitInfo, distance, mask))
         {
+            //Muestra la tecla para interactuar
             if (displayText != null)
             {
                 displayText.enabled = true;
             }
-            if (hitInfo.collider.GetComponent<Telefono>() != null)
+            // Tal vez poner click izquierdo 
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                /*  ** TELEFONO ** */
+                if (hitInfo.collider.GetComponent<Telefono>() != null)
                 {
-                    //Todo esto todavia esta por ver
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                     hitInfo.collider.GetComponent<InteractorBase>().enableInteract(false);
                 }
-            }
 
-            if (hitInfo.collider.GetComponent<Puerta>() != null)
-            {
-                //Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
-                                                                                  // Debug.Log("estoy mirando un interactuable")
-                if (Input.GetKeyDown(KeyCode.E))
+                /*  ** PUERTA ** */
+                if (hitInfo.collider.GetComponent<Puerta>() != null)
+                {
+                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+
+                }
+
+                /*  ** PUERTA - DESPLAZABLE ** */
+                if (hitInfo.collider.GetComponent<PuertaDesplazable>() != null)
+                {   
+                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                    
+                }
+
+                /*  ** PUERTA - HABITACIONES ** */
+                if (hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)
                 {
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                 }
-            }
-            if (hitInfo.collider.GetComponent<PuertaDesplazable>() != null)
-            {
-                //Debug.Log(hitInfo.collider.GetComponent<Puerta>().promptMessage); //pronto lo cambio a fotooo
-                // Debug.Log("estoy mirando un interactuable")
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                }
-            }
-            if(hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
-                }
-            }
-            if(hitInfo.collider.GetComponent<PuertaSola>() != null)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
+
+                /*  ** PUERTA - SOLA ** */
+                if (hitInfo.collider.GetComponent<PuertaSola>() != null)
                 {
                     hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
                     hitInfo.collider.GetComponent<PuertaSola>().closed = false;
@@ -94,27 +89,33 @@ public class Interactor2000 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<Puerta>() != null)
+        if(other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<PuertaSola>() != null)
         {
-           
-            PuertaSola p = other.GetComponentInChildren<PuertaSola>();
-            if(p != null)
-            {
-                if (p.closed)
-                {
-                    p.enableCross(true);
-                }
-                other.GetComponentInChildren<PuertaSola>().close();
+            Debug.Log("SOLA - COLISION");
 
-            }
-            if (other.GetComponentInChildren<Puerta>() != null)
+            PuertaSola p = other.GetComponentInChildren<PuertaSola>();
+            
+            if (p.closed)
             {
-                other.GetComponentInChildren<Puerta>().close();
+                p.enableCross(true);
             }
+            p.close();
+            
         }
         else if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<PuertaHabitaciones>() != null)
         {
             other.GetComponentInChildren<PuertaHabitaciones>().close();
+        }
+
+        //Comprobacion ultima porque 
+        else if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<Puerta>() != null)
+        {
+            Debug.Log("PUERTA - COLISION");
+
+            if (other.GetComponentInChildren<Puerta>() != null)
+            {
+                other.GetComponentInChildren<Puerta>().close();
+            }
         }
     }
 }
