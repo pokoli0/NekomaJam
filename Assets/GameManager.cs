@@ -120,8 +120,8 @@ public class GameManager : MonoBehaviour
         if (objectToDestroy != null)
         {
             // habitacionAnterior.parent 
-            Debug.Log("Se destrruye habitacion" + gameObject);
-            Destroy(gameObject);
+            Debug.Log("Se destrruye habitacion" + objectToDestroy);
+            Destroy(objectToDestroy);
         }
     }
 }
