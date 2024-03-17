@@ -22,6 +22,10 @@ public class DialogueScript : MonoBehaviour
 
     private bool isWritting = false;
     
+    public bool hasFinished = false;
+
+    
+    
     void Start()
     {
         index = 0;
@@ -32,6 +36,7 @@ public class DialogueScript : MonoBehaviour
     {
     }
 public void StartDialogue() {
+        hasFinished = false;
         isWritting = true;
         StartCoroutine(WriteLine());
 }
@@ -64,8 +69,8 @@ public void StartDialogue() {
                 dialogueText.text = string.Empty;
                 isWritting = false;
                 index = 0;
-            
-        }
+
+            }
         
         
     }
