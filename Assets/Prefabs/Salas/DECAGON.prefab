@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   telefono: {fileID: 0}
-  telefonoDodec: {fileID: 0}
+  telefonoDodec: {fileID: 4881996886770072648}
 --- !u!1001 &390216803376566168
 PrefabInstance:
   m_ObjectHideFlags: 0
