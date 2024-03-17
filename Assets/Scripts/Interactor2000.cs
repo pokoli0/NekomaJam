@@ -81,7 +81,7 @@ public class Interactor2000 : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("TP A HABITACION");
+                        GameManager.Instance.initFlash();
                     }
                 }
             }
