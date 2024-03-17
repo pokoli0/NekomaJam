@@ -1,5 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2392132873268265486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6261183299652423804}
+  - component: {fileID: 1234250586336878582}
+  - component: {fileID: 4110810249954595288}
+  m_Layer: 0
+  m_Name: InteraccionCollider
+  m_TagString: sonar_telefono
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6261183299652423804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2392132873268265486}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: 0, w: 0.0000002533197}
+  m_LocalPosition: {x: -0.03524336, y: 1.0954359, z: 0.06660463}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3842994476656217903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1234250586336878582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2392132873268265486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c0e9c75e39d597429a32ba28e3d24c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telefono: {fileID: 3160646080789946101}
+--- !u!65 &4110810249954595288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2392132873268265486}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7, y: 4.228883, z: 4.552347}
+  m_Center: {x: 0, y: 0.5289297, z: 1.472867}
 --- !u!1 &4508747682924022266
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +257,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3160646080789946101}
+    - targetCorrespondingSourceObject: {fileID: 5486561208505051556, guid: 7bf0c6c741fffd44791b40faf42fc82a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6721641555126250251}
   m_SourcePrefab: {fileID: 100100000, guid: 7bf0c6c741fffd44791b40faf42fc82a, type: 3}
 --- !u!4 &3477015298056750634 stripped
 Transform:
@@ -279,6 +350,105 @@ MonoBehaviour:
   puertaBorrado: {fileID: 1709539994933613909}
   puertaFlash: {fileID: 0}
   firstRoom: 0
+  tonoLlamada: {fileID: 8300000, guid: accb55a31902ed545862ef9e395b0ff4, type: 3}
+  colgarSonido: {fileID: 8300000, guid: 883a4a5f72714e94888a4ca895a516f7, type: 3}
+  sonando: 1
+--- !u!82 &6721641555126250251
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5075887250125425447}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &3249863109327520102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,6 +462,11 @@ PrefabInstance:
       propertyPath: puerta
       value: 
       objectReference: {fileID: 1709539994933613909}
+    - target: {fileID: 3652978026160755892, guid: 8293f866aec83eb47b6c209b31019c60,
+        type: 3}
+      propertyPath: telefono
+      value: 
+      objectReference: {fileID: 3160646080789946101}
     - target: {fileID: 3652978026160755892, guid: 8293f866aec83eb47b6c209b31019c60,
         type: 3}
       propertyPath: habitacionAnterior
@@ -478,6 +653,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3477015298056750634}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6261183299652423804}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}

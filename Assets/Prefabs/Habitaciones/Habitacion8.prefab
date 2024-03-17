@@ -8,6 +8,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2651510947935933519, guid: 7c716e5049455c44ea113e59008554e3,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582631198923893313, guid: 7c716e5049455c44ea113e59008554e3,
+        type: 3}
+      propertyPath: firstRoom
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4582631198923893313, guid: 7c716e5049455c44ea113e59008554e3,
         type: 3}
       propertyPath: puertaBorrado

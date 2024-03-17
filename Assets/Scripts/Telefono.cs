@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //esto es un objeto interactuable por eso hereda de interactorBase
@@ -25,7 +26,7 @@ public class Telefono : InteractorBase
 
     [SerializeField] private AudioClip tonoLlamada;
     [SerializeField] private AudioClip colgarSonido;
-    public bool sonando = true;
+    public bool sonando = false;
     private AudioSource source;
 
     private GameManager gM;
@@ -33,15 +34,14 @@ public class Telefono : InteractorBase
     void Start()
     {
         gM = GameManager.Instance;
-
+        sonando = false;
         //Inicializas source y reproduces sonido
         source = GetComponent<AudioSource>();
-        source.clip = tonoLlamada;
-
-        if (sonando) StartSound();
 
         if (firstRoom)
         {
+            sonando = true;
+            StartSound();
             paredConPuerta.SetActive(false);
             paredSinPuerta.SetActive(true);
         }
@@ -53,6 +53,7 @@ public class Telefono : InteractorBase
     }
     public void StartSound()
     {
+        source.clip = tonoLlamada;
         source.loop = true;
         source.Play();
     }
@@ -61,6 +62,7 @@ public class Telefono : InteractorBase
     {
         source.Stop();
         sonando = false;
+        source.loop = false;
         source.clip = colgarSonido;
         source.Play();
     }
