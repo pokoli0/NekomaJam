@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: 2306502863023696879, guid: 61b44f75c70fe35418558c9a23f2a41b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53.96653
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2306502863023696879, guid: 61b44f75c70fe35418558c9a23f2a41b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -30.83313
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2306502863023696879, guid: 61b44f75c70fe35418558c9a23f2a41b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.358246
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2306502863023696879, guid: 61b44f75c70fe35418558c9a23f2a41b,
         type: 3}
@@ -61,15 +61,53 @@ PrefabInstance:
     - target: {fileID: 4551405780074785173, guid: 61b44f75c70fe35418558c9a23f2a41b,
         type: 3}
       propertyPath: m_Name
-      value: Transicion4 Variant
+      value: Transicion4
       objectReference: {fileID: 0}
     - target: {fileID: 4551405780074785173, guid: 61b44f75c70fe35418558c9a23f2a41b,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7982384428020502185, guid: 61b44f75c70fe35418558c9a23f2a41b,
+        type: 3}
+      propertyPath: flash
+      value: 
+      objectReference: {fileID: 8543566551295520964, guid: 227257a812bb8864b839edf1dfd3d86c,
+        type: 3}
+    - target: {fileID: 7982384428020502185, guid: 61b44f75c70fe35418558c9a23f2a41b,
+        type: 3}
+      propertyPath: posToTeleport.x
+      value: 42.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982384428020502185, guid: 61b44f75c70fe35418558c9a23f2a41b,
+        type: 3}
+      propertyPath: posToTeleport.y
+      value: -5.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982384428020502185, guid: 61b44f75c70fe35418558c9a23f2a41b,
+        type: 3}
+      propertyPath: posToTeleport.z
+      value: -54.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982384428020502185, guid: 61b44f75c70fe35418558c9a23f2a41b,
+        type: 3}
+      propertyPath: habitacionActual
+      value: 
+      objectReference: {fileID: 1255377994754130730}
+    - target: {fileID: 7982384428020502185, guid: 61b44f75c70fe35418558c9a23f2a41b,
+        type: 3}
+      propertyPath: habitacionTeleport
+      value: 
+      objectReference: {fileID: 9039363369737329143, guid: c3b5834dccc44254e81024f6d3302093,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61b44f75c70fe35418558c9a23f2a41b, type: 3}
+--- !u!1 &1255377994754130730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4551405780074785173, guid: 61b44f75c70fe35418558c9a23f2a41b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3333271564168587967}
+  m_PrefabAsset: {fileID: 0}

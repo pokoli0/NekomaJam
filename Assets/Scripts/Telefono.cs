@@ -16,6 +16,7 @@ public class Telefono : InteractorBase
     [SerializeField] private Vector3 rotacionHabitacionSiguiente;
     [SerializeField] private Vector3 rotacionTransicionSiguiente;
     [SerializeField] private GameObject puertaBorrado;
+    [SerializeField] private GameObject puertaFlash = null;
     public bool firstRoom = false;
 
     private GameManager gM;
@@ -42,7 +43,8 @@ public class Telefono : InteractorBase
 
     protected override void Interact()
     {
-        if(puertaBorrado != null) Destroy(puertaBorrado);
+        if (puertaFlash != null) puertaFlash.GetComponent<FlashInteract>().enabled = true;
+        if (puertaBorrado != null) Destroy(puertaBorrado);
         Debug.Log("Interactuo telefono");
         gM.getTextManager().showDialogo(gM.getHabitacion());
         gM.nextHabitacion();
