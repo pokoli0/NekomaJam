@@ -52,7 +52,7 @@ public class Interactor2000 : MonoBehaviour
                 /*  ** PUERTA ** */
                 if (hitInfo.collider.GetComponent<Puerta>() != null)
                 {
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                    hitInfo.collider.GetComponent<Puerta>().BaseInteract();
 
                 }
 
@@ -66,13 +66,13 @@ public class Interactor2000 : MonoBehaviour
                 /*  ** PUERTA - HABITACIONES ** */
                 if (hitInfo.collider.GetComponent<PuertaHabitaciones>() != null)
                 {
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                    hitInfo.collider.GetComponent<PuertaHabitaciones>().BaseInteract();
                 }
 
                 /*  ** PUERTA - SOLA ** */
                 if (hitInfo.collider.GetComponent<PuertaSola>() != null)
                 {
-                    hitInfo.collider.GetComponent<InteractorBase>().BaseInteract();
+                    hitInfo.collider.GetComponent<PuertaSola>().BaseInteract();
                     PuertaSola p = hitInfo.collider.GetComponent<PuertaSola>();
                     if (!p.CanCross())
                     {
@@ -84,7 +84,7 @@ public class Interactor2000 : MonoBehaviour
                     }
                 }
                 /*  ** FLASH ** */
-                if (hitInfo.collider.GetComponent<FlashInteract>() != null)
+                if (hitInfo.collider.GetComponent<FlashInteract>() != null && hitInfo.collider.GetComponent<FlashInteract>().enabled == true)
                 {
                     Debug.Log("Intento interactuar puertaFlash");
                     hitInfo.collider.GetComponent<FlashInteract>().BaseInteract();

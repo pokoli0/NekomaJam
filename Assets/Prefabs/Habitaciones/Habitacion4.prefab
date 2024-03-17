@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 1291965766178476201, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 54.111477
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291965766178476201, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 1291965766178476201, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 153.77054
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291965766178476201, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
@@ -70,9 +70,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5438649655595570143, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
+      propertyPath: puertaFlash
+      value: 
+      objectReference: {fileID: 6284388496268108548}
+    - target: {fileID: 5438649655595570143, guid: 6135987b9305d5948b510f63a6035144,
+        type: 3}
+      propertyPath: puertaBorrado
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438649655595570143, guid: 6135987b9305d5948b510f63a6035144,
+        type: 3}
       propertyPath: siguienteHabitacion
       value: 
-      objectReference: {fileID: 7946352400943608717}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438649655595570143, guid: 6135987b9305d5948b510f63a6035144,
+        type: 3}
+      propertyPath: siguienteTransicion
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -95,7 +110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6284388496268108548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4710c9dcddaa50648b5e1210321d52bc, type: 3}
   m_Name: 
@@ -104,6 +119,7 @@ MonoBehaviour:
   habitacionTeleport: {fileID: 1255377994754130730, guid: 08e52f14e6c09124db06705489579896,
     type: 3}
   habitacionActual: {fileID: 7946352400943608717}
+  flash: {fileID: 8543566551295520964, guid: 227257a812bb8864b839edf1dfd3d86c, type: 3}
   posToTeleport: {x: -45.48, y: 4.88, z: 65.1}
 --- !u!1 &7946352400943608717 stripped
 GameObject:

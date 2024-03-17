@@ -576,6 +576,17 @@ PrefabInstance:
       propertyPath: puerta
       value: 
       objectReference: {fileID: 899425808470718816}
+    - target: {fileID: 3652978026160755892, guid: 8293f866aec83eb47b6c209b31019c60,
+        type: 3}
+      propertyPath: habitacionAnterior
+      value: 
+      objectReference: {fileID: 4964215455685748467}
+    - target: {fileID: 3652978026160755892, guid: 8293f866aec83eb47b6c209b31019c60,
+        type: 3}
+      propertyPath: habitacionSiguiente
+      value: 
+      objectReference: {fileID: 7946352400943608717, guid: 7c716e5049455c44ea113e59008554e3,
+        type: 3}
     - target: {fileID: 4224469732185232435, guid: 8293f866aec83eb47b6c209b31019c60,
         type: 3}
       propertyPath: m_Name
@@ -765,17 +776,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 276de9e08b67824418068d106946c0e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.72211
+      value: 19.050478
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 276de9e08b67824418068d106946c0e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.003452152
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 276de9e08b67824418068d106946c0e7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 50.932396
+      value: 56.259113
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 276de9e08b67824418068d106946c0e7,
         type: 3}
