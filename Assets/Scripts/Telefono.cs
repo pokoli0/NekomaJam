@@ -69,6 +69,7 @@ public class Telefono : InteractorBase
 
     protected override void Interact()
     {
+        CogerTel();
         if (puertaFlash != null) puertaFlash.GetComponent<FlashInteract>().enabled = true;
         if (puertaBorrado != null) DestroyImmediate(puertaBorrado,true);
         Debug.Log("Interactuo telefono");
