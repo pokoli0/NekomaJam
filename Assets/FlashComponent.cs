@@ -13,6 +13,8 @@ public class FlashComponent : MonoBehaviour
     private float velTransicion = 1f;
     [SerializeField]
     private float tiempoAntesFlash = 1f;
+    [SerializeField]
+    private Color flashColor;
 
     private Color colorInicial;
 
@@ -20,18 +22,27 @@ public class FlashComponent : MonoBehaviour
     void Start()
     {
         colorInicial = flashImg_.color;
+        flashColor.a = 0;
     }
-   
+   /// <summary>
+   /// espera tiempoAntesFlash para poner la pantalla del color deseado
+   /// </summary>
     public void startFlash()
     {
         Invoke("waitToFlash", tiempoAntesFlash);
     }
 
+    /// <summary>
+    /// pone la pantalla del color deseado y espera tiempoEnBlanco
+    /// </summary>
     void waitToFlash()
     {
-        flashImg_.color = Color.white;
+        flashImg_.color = flashColor;
         Invoke("startTransition", tiempoEnBlanco);
     }
+    /// <summary>
+    /// Inicia la transicion del color completo a transparente (alpha 1 -> 0)
+    /// </summary>
     void startTransition()
     {
         StartCoroutine(Flash());
