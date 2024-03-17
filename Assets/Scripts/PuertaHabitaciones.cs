@@ -10,6 +10,12 @@ public class PuertaHabitaciones : InteractorBase
     [SerializeField] public GameObject habitacionSiguiente;
     [SerializeField] public GameObject puerta;
 
+    private GameManager gameManager;
+    public bool firstRoom = false;
+
+    [SerializeField] public Telefono telefono;
+
+
     // Start is called before the first frame update
     void Start()
     {
