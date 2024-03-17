@@ -8,6 +8,7 @@ public class PuertaHabitaciones : InteractorBase
     public Animator animator;
     [SerializeField] public GameObject habitacionAnterior;
     [SerializeField] public GameObject habitacionSiguiente;
+    [SerializeField] public GameObject puerta;
 
     // Start is called before the first frame update
     void Start()
@@ -36,11 +37,12 @@ public class PuertaHabitaciones : InteractorBase
 
     public void afterCloseEvent()
     {
-        Debug.Log("FUERA");
         if (habitacionAnterior != null)
         {
+            // habitacionAnterior.parent 
+            puerta.transform.SetParent(habitacionSiguiente.transform);
             Destroy(habitacionAnterior);
-            Debug.Log("DENTRO");
         }
+
     }
 }
