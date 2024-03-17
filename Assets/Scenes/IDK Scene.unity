@@ -629,12 +629,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290926480}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 11.607082, y: 4.93, z: -27.46}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.07053658, y: 6.76323, z: -0.8051138}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 676344845}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &336913574 stripped
 GameObject:
@@ -736,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.27
+      value: 11.71
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalPosition.y
@@ -923,6 +923,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 0
       addedObject: {fileID: 151378936744573337}
+    - targetCorrespondingSourceObject: {fileID: 505604415945053149, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 290926483}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 887090538316450151, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
         type: 3}
@@ -1276,6 +1280,7 @@ MonoBehaviour:
   habitacionAnterior: {fileID: 336913574}
   habitacionSiguiente: {fileID: 0}
   puerta: {fileID: 0}
+  closed: 1
   firstRoom: 0
   telefono: {fileID: 0}
 --- !u!1 &2137013052 stripped
@@ -1401,6 +1406,5 @@ SceneRoots:
   - {fileID: 1496793848}
   - {fileID: 21878564}
   - {fileID: 381043032}
-  - {fileID: 290926483}
   - {fileID: 1914704739}
   - {fileID: 171907023}
