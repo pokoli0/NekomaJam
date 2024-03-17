@@ -267,13 +267,13 @@ MonoBehaviour:
   promptMessage: iuytfdfghj
   siguienteHabitacion: {fileID: 1920271393094158867, guid: 6135987b9305d5948b510f63a6035144,
     type: 3}
-  siguienteTransicion: {fileID: 7441644070962818007, guid: c08d24fd4866d1d49b2579493443456e,
+  siguienteTransicion: {fileID: 8413615686759120430, guid: 76a762786a16ccd4499eb010ed1677be,
     type: 3}
   habitacionActual: {fileID: 4476261031295948181}
   paredSinPuerta: {fileID: 4508747682924022266}
   paredConPuerta: {fileID: 1751618506541006764}
   posicionHabitacionSiguiente: {x: -0.15218425, y: 0, z: -90.24469}
-  posicionTransicionSiguiente: {x: -1.5141778, y: 0, z: -3.372635}
+  posicionTransicionSiguiente: {x: -1.5141777, y: 0, z: -3.372635}
   rotacionHabitacionSiguiente: {x: 0, y: 0, z: 0}
   rotacionTransicionSiguiente: {x: 0, y: 0, z: 0}
   puertaBorrado: {fileID: 1709539994933613909}

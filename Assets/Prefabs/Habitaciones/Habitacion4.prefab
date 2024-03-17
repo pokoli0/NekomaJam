@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: 1291965766178476201, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.219925
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291965766178476201, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.003452152
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291965766178476201, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 56.247406
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291965766178476201, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
@@ -61,15 +61,26 @@ PrefabInstance:
     - target: {fileID: 1920271393094158867, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
       propertyPath: m_Name
-      value: Habitacion4 Variant
+      value: Habitacion4
       objectReference: {fileID: 0}
     - target: {fileID: 1920271393094158867, guid: 6135987b9305d5948b510f63a6035144,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5438649655595570143, guid: 6135987b9305d5948b510f63a6035144,
+        type: 3}
+      propertyPath: siguienteHabitacion
+      value: 
+      objectReference: {fileID: 7946352400943608717}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6135987b9305d5948b510f63a6035144, type: 3}
+--- !u!1 &7946352400943608717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1920271393094158867, guid: 6135987b9305d5948b510f63a6035144,
+    type: 3}
+  m_PrefabInstance: {fileID: 8422067480069421470}
+  m_PrefabAsset: {fileID: 0}

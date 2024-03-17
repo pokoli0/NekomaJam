@@ -526,7 +526,6 @@ MonoBehaviour:
   mesa: {fileID: 768011933012861015}
   mesaPrueba: {fileID: 3557285735100677651, guid: 7bf0c6c741fffd44791b40faf42fc82a,
     type: 3}
-  puerta: {fileID: 0}
   paredSinPuerta: {fileID: 666913024627752344}
   paredConPuerta: {fileID: 5839632576172436359}
   posicionPasillo: {x: -1.4380877, y: 2.842171e-16, z: 19.987064}
