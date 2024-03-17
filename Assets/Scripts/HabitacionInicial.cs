@@ -9,7 +9,6 @@ public class HabitacionInicial : MonoBehaviour
     public float totalTime = 5f; // Tiempo total de la cuenta atrás en segundos
     private float currentTime; // Tiempo actual de la cuenta atrás
     [SerializeField] private GameObject mesa;
-    [SerializeField] private GameObject mesaPrueba;
     //[SerializeField] private GameObject puerta;
     [SerializeField] private GameObject paredSinPuerta;
     [SerializeField] private GameObject paredConPuerta;
