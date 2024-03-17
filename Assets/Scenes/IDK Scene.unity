@@ -903,6 +903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4881996886770072648, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
         type: 3}
+      propertyPath: firstRoom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881996886770072648, guid: da8e9522bab0fba4d913b1ca86fd1dfc,
+        type: 3}
       propertyPath: paredSinPuerta
       value: 
       objectReference: {fileID: 7497568997838611877}
