@@ -9,13 +9,12 @@ public class PuertaHabitaciones : InteractorBase
     [SerializeField] public GameObject habitacionAnterior;
     [SerializeField] public GameObject habitacionSiguiente;
     [SerializeField] public GameObject puerta;
-<<<<<<< Updated upstream
-=======
+
     private GameManager gameManager;
     public bool firstRoom = false;
 
     [SerializeField] public Telefono telefono;
->>>>>>> Stashed changes
+
 
     // Start is called before the first frame update
     void Start()
