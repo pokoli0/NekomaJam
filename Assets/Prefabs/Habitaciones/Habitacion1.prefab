@@ -370,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 715cd62e20ec4bc45a487402dcc9a0e5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692b3c9909bcca240996e50e297ca347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 7.98
+  totalTime: 6.51
   mesa: {fileID: 768011933012861015}
   paredSinPuerta: {fileID: 666913024627752344}
   paredConPuerta: {fileID: 5839632576172436359}

@@ -38,7 +38,7 @@ public class PuertaHabitaciones : InteractorBase
     public void close()
     {
         animator.SetTrigger("Close");
-        Invoke("afterCloseEvent", 2f);
+        Invoke("afterCloseEvent", 0.8f);
     }
 
     public void afterCloseEvent()
@@ -46,7 +46,7 @@ public class PuertaHabitaciones : InteractorBase
         if (habitacionAnterior != null)
         {
             // habitacionAnterior.parent 
-            
+
             Destroy(habitacionAnterior);
         }
 

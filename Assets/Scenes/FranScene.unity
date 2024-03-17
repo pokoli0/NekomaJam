@@ -216,11 +216,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7076616944876085663, guid: 66265d51fed93f14b8c7fb88c4556bdd,
-        type: 3}
-      propertyPath: totalTime
-      value: 1.14
-      objectReference: {fileID: 0}
     - target: {fileID: 8600373983226839486, guid: 66265d51fed93f14b8c7fb88c4556bdd,
         type: 3}
       propertyPath: m_Name
@@ -476,6 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_: {fileID: 1962584919}
+  sonidos: []
   textManager_: {fileID: 67850123}
   flashCanvas_: {fileID: 427807281}
   currHab: 1

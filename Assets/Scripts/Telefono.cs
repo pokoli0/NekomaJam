@@ -6,9 +6,9 @@ using UnityEngine;
 public class Telefono : InteractorBase
 {
 
-    [SerializeField] private GameObject siguienteHabitacion;
-    [SerializeField] private GameObject siguienteTransicion;
-    [SerializeField] private GameObject habitacionActual;
+    [SerializeField] public GameObject siguienteHabitacion;
+    [SerializeField] public GameObject siguienteTransicion;
+    [SerializeField] public GameObject habitacionActual;
     [SerializeField] private GameObject paredSinPuerta;
     [SerializeField] private GameObject paredConPuerta;
     [SerializeField] private Vector3 posicionHabitacionSiguiente;
@@ -44,7 +44,7 @@ public class Telefono : InteractorBase
     protected override void Interact()
     {
         if (puertaFlash != null) puertaFlash.GetComponent<FlashInteract>().enabled = true;
-        if (puertaBorrado != null) Destroy(puertaBorrado);
+        if (puertaBorrado != null) DestroyImmediate(puertaBorrado,true);
         Debug.Log("Interactuo telefono");
         gM.getTextManager().showDialogo(gM.getHabitacion());
         gM.nextHabitacion();
@@ -53,6 +53,7 @@ public class Telefono : InteractorBase
         if (siguienteHabitacion != null && siguienteTransicion != null)
         {
             GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
+            transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(habitacionActual);
             GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
             habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
         }
