@@ -1066,6 +1066,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6443770989479809090, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: openDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: 11712d8f7e2b65148b3cf6b37f21f53b, type: 3}
+    - target: {fileID: 6443770989479809090, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: closeDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: c41c9c9d358cdb84e8a95110ecd462eb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
