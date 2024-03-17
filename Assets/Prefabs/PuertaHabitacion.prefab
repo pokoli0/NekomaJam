@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 7703174578358953827, guid: 3eefa51a5fde7424e939a656ca253e2a,
         type: 3}
       propertyPath: m_Name
-      value: PuertaHabitacion
+      value: PuertaHabitacion Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7703174578358953827, guid: 3eefa51a5fde7424e939a656ca253e2a,
         type: 3}
@@ -105,9 +105,6 @@ MonoBehaviour:
   animator: {fileID: 4893187454687615328}
   habitacionAnterior: {fileID: 0}
   habitacionSiguiente: {fileID: 0}
-  puerta: {fileID: 0}
-  firstRoom: 0
-  telefono: {fileID: 0}
 --- !u!95 &4893187454687615328 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1418458721215867440, guid: 3eefa51a5fde7424e939a656ca253e2a,
