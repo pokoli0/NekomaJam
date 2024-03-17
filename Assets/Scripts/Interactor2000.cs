@@ -64,12 +64,13 @@ public class Interactor2000 : MonoBehaviour
                 {
                     hitInfo.collider.GetComponent<Telefono>().BaseInteract();
                     hitInfo.collider.GetComponent<Telefono>().enableInteract(false);
-                    hitInfo.collider.GetComponent<Telefono>().CogerTel();
+                    
                 }
 
                 /*  ** PUERTA ** */
                 if (hitInfo.collider.GetComponent<Puerta>() != null)
                 {
+
                     PlaySound(openDoor);
                     hitInfo.collider.GetComponent<Puerta>().BaseInteract();
                 }
@@ -150,7 +151,7 @@ public class Interactor2000 : MonoBehaviour
         {
 
             PuertaSola p = other.GetComponentInChildren<PuertaSola>();
-            PlaySound(closeDoor);
+            
             if (p.closed)
             {
                 p.enableCross(true);
@@ -160,14 +161,15 @@ public class Interactor2000 : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<PuertaHabitaciones>() != null)
         {
-            PlaySound(closeDoor);
+            if(!other.GetComponentInChildren<PuertaHabitaciones>().closed) PlaySound(closeDoor);
             other.GetComponentInChildren<PuertaHabitaciones>().close();
         }
 
         //Comprobacion ultima porque 
         else if (other.gameObject.CompareTag("close_door") && other.GetComponentInChildren<Puerta>() != null)
         {
-            PlaySound(closeDoor);
+            if(!other.GetComponentInChildren<Puerta>().closed) PlaySound(closeDoor);
+
             if (other.GetComponentInChildren<Puerta>() != null)
             {
                 other.GetComponentInChildren<Puerta>().close();

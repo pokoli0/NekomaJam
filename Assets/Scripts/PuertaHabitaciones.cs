@@ -9,7 +9,7 @@ public class PuertaHabitaciones : InteractorBase
     [SerializeField] public GameObject habitacionAnterior;
     [SerializeField] public GameObject habitacionSiguiente;
     [SerializeField] public GameObject puerta;
-
+    public bool closed = true;
     private GameManager gameManager;
     public bool firstRoom = false;
 
@@ -30,6 +30,7 @@ public class PuertaHabitaciones : InteractorBase
 
     protected override void Interact()
     {
+        closed = false;
         GameManager gameManager = GameManager.Instance;
         Debug.Log("Interactuo puerta"+ gameManager.hasFinished());
         if (canInteract && gameManager.hasFinished())
@@ -41,6 +42,7 @@ public class PuertaHabitaciones : InteractorBase
 
     public void close()
     {
+        closed = true;
         GameManager gameManager = GameManager.Instance;
         animator.SetTrigger("Close");
         gameManager.DestroyInOneSecond(habitacionAnterior);
