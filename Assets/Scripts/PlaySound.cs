@@ -30,6 +30,7 @@ public class PlaySound : MonoBehaviour
             else
             {
                 Debug.LogWarning("No se ha asignado un AudioClip para reproducir en la colisión.");
+                DetenerTodosLosSonidos();
             }
         }
     }
