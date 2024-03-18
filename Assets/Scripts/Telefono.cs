@@ -20,6 +20,7 @@ public class Telefono : InteractorBase
     [SerializeField] public GameObject puertaBorrado;
     [SerializeField] private GameObject puertaFlash = null;
     public bool firstRoom = false;
+    public bool decagono = false;
     
 
     [Header("AUDIO SETTINGS")]
@@ -77,19 +78,39 @@ public class Telefono : InteractorBase
         gM.nextHabitacion();
         //ACCION DE LA PUERTA
         Vector3 posActual = habitacionActual.transform.position;
-        if (siguienteHabitacion != null && siguienteTransicion != null)
+        if(decagono == false)
         {
-            GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
-            if (transicion.GetComponentInChildren<PuertaHabitaciones>() != null) transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(habitacionActual);
-            GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
-            if (habitacion.GetComponentInChildren<PuertaHabitaciones>() != null) habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
+            if (siguienteHabitacion != null && siguienteTransicion != null)
+            {
+                GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
+                if (transicion.GetComponentInChildren<PuertaHabitaciones>() != null) transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(habitacionActual);
+                GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
+                if (habitacion.GetComponentInChildren<PuertaHabitaciones>() != null) habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
+            }
+            else if (siguienteTransicion != null)
+            {
+                GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
+                if (transicion.GetComponentInChildren<PuertaHabitaciones>() != null) transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transform.parent.parent.gameObject);
+            }
+
         }
-        else if (siguienteTransicion != null)
+        else
         {
-            GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, Quaternion.Euler(rotacionTransicionSiguiente));
-            if (transicion.GetComponentInChildren<PuertaHabitaciones>() != null) transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transform.parent.parent.gameObject);
+            if (siguienteHabitacion != null && siguienteTransicion != null)
+            {
+                GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, this.transform.parent.parent.rotation);
+                if (transicion.GetComponentInChildren<PuertaHabitaciones>() != null) transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(habitacionActual);
+                GameObject habitacion = Instantiate(siguienteHabitacion, habitacionActual.transform.position + posicionHabitacionSiguiente, Quaternion.Euler(rotacionHabitacionSiguiente));
+                if (habitacion.GetComponentInChildren<PuertaHabitaciones>() != null) habitacion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transicion);
+            }
+            else if (siguienteTransicion != null)
+            {
+                GameObject transicion = Instantiate(siguienteTransicion, habitacionActual.transform.position + posicionTransicionSiguiente, this.transform.parent.parent.rotation);
+                if (transicion.GetComponentInChildren<PuertaHabitaciones>() != null) transicion.GetComponentInChildren<PuertaHabitaciones>().setHabitacionAnterior(transform.parent.parent.gameObject);
+            }
+
         }
-        
+
         paredConPuerta.SetActive(true);
         paredSinPuerta.SetActive(false);
     }
